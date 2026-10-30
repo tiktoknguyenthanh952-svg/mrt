@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nguyễn Thanh | Tech Blog & Open-Source Tools Leaderboard</title>
-  <meta name="description" content="Blog cá nhân của Nguyễn Thanh - Xếp hạng các công cụ lập trình, AI agent và dự án nguồn mở thịnh hành.">
+  <title>Nguyễn Thanh | Tech Blog & AI News Update</title>
+  <meta name="description" content="Blog cá nhân của Nguyễn Thanh - Tin tức AI mới nhất, xếp hạng công cụ và phân tích kỹ thuật.">
   <meta name="author" content="Nguyễn Thanh">
 
   <!-- Tailwind CSS CDN -->
@@ -48,6 +48,10 @@
 
       <!-- Quick Navigation -->
       <nav class="hidden sm:flex items-center gap-2 text-xs font-semibold">
+        <a href="#ai-news" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300 transition-colors">
+          <i class="fa-solid fa-bolt text-amber-500"></i>
+          Tin tức AI
+        </a>
         <a href="#leaderboard" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300 transition-colors">
           <i class="fa-solid fa-trophy text-amber-500"></i>
           BXH Công cụ
@@ -55,10 +59,6 @@
         <a href="https://repo.tinix.ai/vi" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 border border-indigo-200 dark:border-indigo-800/80 hover:bg-indigo-100 transition-colors">
           <i class="fa-solid fa-arrow-trend-up"></i>
           TiniX Trending
-        </a>
-        <a href="https://aistudio.google.com" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300 transition-colors">
-          <i class="fa-solid fa-cube text-amber-500"></i>
-          AI Studio
         </a>
       </nav>
 
@@ -75,32 +75,96 @@
   <section class="max-w-4xl mx-auto px-4 pt-10 pb-6 w-full border-b border-slate-200 dark:border-slate-800">
     <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6 text-center sm:text-left">
       <div class="w-20 h-20 rounded-2xl bg-gradient-to-tr from-brand-600 via-indigo-500 to-sky-400 text-white flex items-center justify-center text-3xl shadow-xl shadow-brand-500/20 flex-shrink-0">
-        <i class="fa-solid fa-ranking-star"></i>
+        <i class="fa-solid fa-wand-magic-sparkles"></i>
       </div>
       <div class="space-y-2 flex-grow">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium bg-amber-50 text-amber-700 dark:bg-amber-950/60 dark:text-amber-400 border border-amber-200 dark:border-amber-800">
-          <i class="fa-solid fa-bolt text-amber-500"></i>
-          Cập nhật Bảng xếp hạng Công cụ & Xu hướng công nghệ mới
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium bg-emerald-50 text-emerald-600 dark:bg-emerald-950/60 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          Cập nhật thông tin AI, LLM & Công nghệ thời gian thực
         </div>
         <h1 class="text-2xl sm:text-3xl font-extrabold tracking-tight">
-          Hệ sinh thái Công cụ & Bản tin Lập trình
+          Tin Tức Trí Tuệ Nhân Tạo & Kỹ Thuật Mã Nguồn Mở
         </h1>
         <p class="text-slate-600 dark:text-slate-400 text-sm sm:text-base leading-relaxed">
-          Ghi chép của <strong class="text-slate-900 dark:text-white">Nguyễn Thanh</strong>. Theo dõi, đánh giá và xếp hạng các công cụ mã nguồn mở, agentic AI và công nghệ phần mềm thực chiến.
+          Ghi chép của <strong class="text-slate-900 dark:text-white">Nguyễn Thanh</strong>. Tổng hợp những đột phá mới nhất về Agentic AI, các bản cập nhật mô hình lớn và công cụ lập trình thế hệ mới.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- BẢNG XẾP HẠNG CÁC CÔNG CỤ (LEADERBOARD SECTION) -->
+  <!-- PHẦN 1: TIN TỨC AI NÓNG (AI NEWS FLASH - 1 CỘT) -->
+  <section id="ai-news" class="max-w-4xl mx-auto px-4 pt-8 w-full">
+    <div class="bg-gradient-to-br from-indigo-50/50 to-slate-50 dark:from-slate-900 dark:to-slate-950 rounded-2xl border border-indigo-100 dark:border-slate-800 p-5 shadow-sm space-y-4">
+      <div class="flex items-center justify-between border-b border-indigo-100/60 dark:border-slate-800 pb-3">
+        <h2 class="text-base sm:text-lg font-bold flex items-center gap-2 text-slate-900 dark:text-white">
+          <i class="fa-solid fa-bolt text-amber-500"></i> Bản Tin AI Nhanh (Flash News)
+        </h2>
+        <span class="text-[11px] font-mono text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-950/60 px-2 py-0.5 rounded-full border border-indigo-200 dark:border-indigo-800">
+          Live Feed
+        </span>
+      </div>
+
+      <div class="space-y-3" id="ai-news-container">
+        <!-- Tin 1 -->
+        <div class="p-3.5 rounded-xl bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800/80 hover:border-indigo-400/60 transition-all flex flex-col gap-1.5">
+          <div class="flex items-center justify-between text-xs">
+            <span class="font-semibold text-indigo-600 dark:text-indigo-400 flex items-center gap-1.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-indigo-500"></span> Google AI & Gemini
+            </span>
+            <span class="text-slate-400 text-[11px]">Vừa xong</span>
+          </div>
+          <h3 class="text-sm sm:text-base font-bold text-slate-900 dark:text-white">
+            Google AI Studio nâng cấp hỗ trợ Context Caching và tương tác thời gian thực
+          </h3>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+            Cho phép các nhà phát triển cắt giảm chi phí token đáng kể khi truy vấn ngữ cảnh dài trên các mô hình Gemini, kết hợp trích xuất mã mẫu tự động sang đa dạng ngôn ngữ lập trình.
+          </p>
+        </div>
+
+        <!-- Tin 2 -->
+        <div class="p-3.5 rounded-xl bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800/80 hover:border-indigo-400/60 transition-all flex flex-col gap-1.5">
+          <div class="flex items-center justify-between text-xs">
+            <span class="font-semibold text-emerald-600 dark:text-emerald-400 flex items-center gap-1.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Agentic Workflows
+            </span>
+            <span class="text-slate-400 text-[11px]">2 giờ trước</span>
+          </div>
+          <h3 class="text-sm sm:text-base font-bold text-slate-900 dark:text-white">
+            Làn sóng Agentic IDE & Spec-Driven Development bùng nổ trong cộng đồng kỹ sư
+          </h3>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+            Các môi trường tích hợp AI agent như Claude Code, Cursor và Google Antigravity chuyển trọng tâm từ sinh mã đơn lẻ sang tự kiểm thử lỗi và quản lý kiến trúc phần mềm tự động[span_1](start_span)[span_1](end_span).
+          </p>
+        </div>
+
+        <!-- Tin 3 -->
+        <div class="p-3.5 rounded-xl bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800/80 hover:border-indigo-400/60 transition-all flex flex-col gap-1.5">
+          <div class="flex items-center justify-between text-xs">
+            <span class="font-semibold text-purple-600 dark:text-purple-400 flex items-center gap-1.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-purple-500"></span> Open Source AI
+            </span>
+            <span class="text-slate-400 text-[11px]">Hôm nay</span>
+          </div>
+          <h3 class="text-sm sm:text-base font-bold text-slate-900 dark:text-white">
+            VoiceStudio & DeepTutor: Các mô hình mã nguồn mở chạy Offline hoàn toàn vươn lên top đầu
+          </h3>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+            Xu hướng tự host (self-hosted) mô hình giọng nói và hệ thống trợ lý học tập cá nhân hóa ngày càng thu hút các lập trình viên nhằm bảo mật dữ liệu tuyệt đối[span_2](start_span)[span_2](end_span).
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHẦN 2: BẢNG XẾP HẠNG CÁC CÔNG CỤ (LEADERBOARD) -->
   <section id="leaderboard" class="max-w-4xl mx-auto px-4 pt-8 w-full">
     <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-5 shadow-sm space-y-4">
       <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-100 dark:border-slate-800 pb-3">
         <div>
-          <h2 class="text-lg font-bold flex items-center gap-2 text-slate-900 dark:text-white">
+          <h2 class="text-base sm:text-lg font-bold flex items-center gap-2 text-slate-900 dark:text-white">
             <i class="fa-solid fa-trophy text-amber-500"></i> Bảng Xếp Hạng Công Cụ Nổi Bật
           </h2>
-          <p class="text-xs text-slate-500">Đánh giá theo tốc độ tăng trưởng GitHub Stars, độ hữu dụng và tính ứng dụng thực tế.</p>
+          <p class="text-xs text-slate-500">Đánh giá theo tốc độ tăng trưởng GitHub Stars từ TiniX Repo Trending[span_3](start_span)[span_3](end_span).</p>
         </div>
         <span class="text-[11px] font-mono text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/50 px-2.5 py-1 rounded-md self-start sm:self-auto">
           ● Tuần này
@@ -108,122 +172,74 @@
       </div>
 
       <!-- Leaderboard List Items -->
-      <div class="space-y-3">
+      <div class="space-y-2.5">
         <!-- Top 1 -->
-        <div class="flex items-center justify-between p-3.5 rounded-xl bg-slate-50 dark:bg-slate-950/60 border border-slate-100 dark:border-slate-800 hover:border-brand-500/50 transition-all">
-          <div class="flex items-center gap-3.5">
-            <span class="w-7 h-7 rounded-lg bg-amber-500 text-slate-950 font-black text-xs flex items-center justify-center flex-shrink-0 shadow-sm">
-              #1
+        <div class="flex items-center justify-between p-3 rounded-xl bg-slate-50 dark:bg-slate-950/60 border border-slate-100 dark:border-slate-800 hover:border-brand-500/50 transition-all">
+          <div class="flex items-center gap-3">
+            <span class="w-6 h-6 rounded bg-amber-500 text-slate-950 font-black text-xs flex items-center justify-center flex-shrink-0">
+              1
             </span>
             <div>
               <div class="flex items-center gap-2 flex-wrap">
-                <span class="font-bold text-sm text-slate-900 dark:text-white">morluto/rea</span>
-                <span class="text-[10px] px-2 py-0.5 rounded bg-brand-50 dark:bg-brand-950 text-brand-600 dark:text-brand-400 font-semibold">AI Agent</span>
-                <span class="text-[10px] text-slate-400 font-mono">TypeScript</span>
+                <span class="font-bold text-xs sm:text-sm text-slate-900 dark:text-white">morluto/rea</span>
+                <span class="text-[10px] px-1.5 py-0.5 rounded bg-brand-50 dark:bg-brand-950 text-brand-600 dark:text-brand-400 font-semibold">AI Agent[span_4](start_span)[span_4](end_span)</span>
               </div>
-              <p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-1">Kỹ thuật dịch ngược (Reverse Engineering) tự động từ app behavior đến binary bằng Agent.</p>
+              <p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-1">Reverse engineer từ app behavior đến native binaries bằng agent[span_5](start_span)[span_5](end_span).</p>
             </div>
           </div>
-          <div class="text-right flex-shrink-0 pl-3">
-            <span class="text-xs font-bold text-slate-900 dark:text-white block font-mono">401.3k ★</span>
-            <span class="text-[10px] text-emerald-600 font-semibold font-mono">+5.3k/ngày</span>
+          <div class="text-right flex-shrink-0 pl-2">
+            <span class="text-xs font-bold text-slate-900 dark:text-white block font-mono">401k ★[span_6](start_span)[span_6](end_span)</span>
           </div>
         </div>
 
         <!-- Top 2 -->
-        <div class="flex items-center justify-between p-3.5 rounded-xl bg-slate-50 dark:bg-slate-950/60 border border-slate-100 dark:border-slate-800 hover:border-brand-500/50 transition-all">
-          <div class="flex items-center gap-3.5">
-            <span class="w-7 h-7 rounded-lg bg-slate-300 dark:bg-slate-700 text-slate-900 dark:text-white font-black text-xs flex items-center justify-center flex-shrink-0">
-              #2
+        <div class="flex items-center justify-between p-3 rounded-xl bg-slate-50 dark:bg-slate-950/60 border border-slate-100 dark:border-slate-800 hover:border-brand-500/50 transition-all">
+          <div class="flex items-center gap-3">
+            <span class="w-6 h-6 rounded bg-slate-300 dark:bg-slate-700 text-slate-900 dark:text-white font-bold text-xs flex items-center justify-center flex-shrink-0">
+              2
             </span>
             <div>
               <div class="flex items-center gap-2 flex-wrap">
-                <span class="font-bold text-sm text-slate-900 dark:text-white">debpalash/VoiceStudio</span>
-                <span class="text-[10px] px-2 py-0.5 rounded bg-sky-50 dark:bg-sky-950 text-sky-600 dark:text-sky-400 font-semibold">Audio AI</span>
-                <span class="text-[10px] text-slate-400 font-mono">Python</span>
+                <span class="font-bold text-xs sm:text-sm text-slate-900 dark:text-white">debpalash/VoiceStudio</span>
+                <span class="text-[10px] px-1.5 py-0.5 rounded bg-sky-50 dark:bg-sky-950 text-sky-600 dark:text-sky-400 font-semibold">Audio AI[span_7](start_span)[span_7](end_span)</span>
               </div>
-              <p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-1">Thay thế ElevenLabs mã nguồn mở, sao chép giọng và lồng tiếng chạy offline 100%.</p>
+              <p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-1">Clone giọng nói cục bộ thay thế ElevenLabs không cần API Key[span_8](start_span)[span_8](end_span).</p>
             </div>
           </div>
-          <div class="text-right flex-shrink-0 pl-3">
-            <span class="text-xs font-bold text-slate-900 dark:text-white block font-mono">92.6k ★</span>
-            <span class="text-[10px] text-emerald-600 font-semibold font-mono">+1.7k/ngày</span>
+          <div class="text-right flex-shrink-0 pl-2">
+            <span class="text-xs font-bold text-slate-900 dark:text-white block font-mono">92k ★[span_9](start_span)[span_9](end_span)</span>
           </div>
         </div>
 
         <!-- Top 3 -->
-        <div class="flex items-center justify-between p-3.5 rounded-xl bg-slate-50 dark:bg-slate-950/60 border border-slate-100 dark:border-slate-800 hover:border-brand-500/50 transition-all">
-          <div class="flex items-center gap-3.5">
-            <span class="w-7 h-7 rounded-lg bg-amber-700/60 text-amber-200 font-black text-xs flex items-center justify-center flex-shrink-0">
-              #3
+        <div class="flex items-center justify-between p-3 rounded-xl bg-slate-50 dark:bg-slate-950/60 border border-slate-100 dark:border-slate-800 hover:border-brand-500/50 transition-all">
+          <div class="flex items-center gap-3">
+            <span class="w-6 h-6 rounded bg-amber-700/60 text-amber-200 font-bold text-xs flex items-center justify-center flex-shrink-0">
+              3
             </span>
             <div>
               <div class="flex items-center gap-2 flex-wrap">
-                <span class="font-bold text-sm text-slate-900 dark:text-white">pbakaus/impeccable</span>
-                <span class="text-[10px] px-2 py-0.5 rounded bg-purple-50 dark:bg-purple-950 text-purple-600 dark:text-purple-400 font-semibold">Dev Tools</span>
-                <span class="text-[10px] text-slate-400 font-mono">Rust</span>
+                <span class="font-bold text-xs sm:text-sm text-slate-900 dark:text-white">pbakaus/impeccable</span>
+                <span class="text-[10px] px-1.5 py-0.5 rounded bg-purple-50 dark:bg-purple-950 text-purple-600 dark:text-purple-400 font-semibold">Anti-Slop[span_10](start_span)[span_10](end_span)</span>
               </div>
-              <p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-1">Ngôn ngữ thiết kế cho AI coding agent, 44 quy tắc kiểm tra tự động chống AI-slop.</p>
+              <p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-1">Ngôn ngữ thiết kế cho AI coding agent, 44 quy tắc kiểm tra tự động[span_11](start_span)[span_11](end_span).</p>
             </div>
           </div>
-          <div class="text-right flex-shrink-0 pl-3">
-            <span class="text-xs font-bold text-slate-900 dark:text-white block font-mono">92.1k ★</span>
-            <span class="text-[10px] text-emerald-600 font-semibold font-mono">+1.9k/ngày</span>
-          </div>
-        </div>
-
-        <!-- Top 4 -->
-        <div class="flex items-center justify-between p-3.5 rounded-xl bg-slate-50 dark:bg-slate-950/60 border border-slate-100 dark:border-slate-800 hover:border-brand-500/50 transition-all">
-          <div class="flex items-center gap-3.5">
-            <span class="w-7 h-7 rounded-lg bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-bold text-xs flex items-center justify-center flex-shrink-0">
-              #4
-            </span>
-            <div>
-              <div class="flex items-center gap-2 flex-wrap">
-                <span class="font-bold text-sm text-slate-900 dark:text-white">cloudflare/security-audit-skill</span>
-                <span class="text-[10px] px-2 py-0.5 rounded bg-emerald-50 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400 font-semibold">Security</span>
-                <span class="text-[10px] text-slate-400 font-mono">JavaScript</span>
-              </div>
-              <p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-1">Biến coding agent thành chuyên gia audit bảo mật với pipeline 6 pha từ Cloudflare.</p>
-            </div>
-          </div>
-          <div class="text-right flex-shrink-0 pl-3">
-            <span class="text-xs font-bold text-slate-900 dark:text-white block font-mono">51.3k ★</span>
-            <span class="text-[10px] text-emerald-600 font-semibold font-mono">+1.5k/ngày</span>
-          </div>
-        </div>
-
-        <!-- Top 5 -->
-        <div class="flex items-center justify-between p-3.5 rounded-xl bg-slate-50 dark:bg-slate-950/60 border border-slate-100 dark:border-slate-800 hover:border-brand-500/50 transition-all">
-          <div class="flex items-center gap-3.5">
-            <span class="w-7 h-7 rounded-lg bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-bold text-xs flex items-center justify-center flex-shrink-0">
-              #5
-            </span>
-            <div>
-              <div class="flex items-center gap-2 flex-wrap">
-                <span class="font-bold text-sm text-slate-900 dark:text-white">google/elephant-goldfish-model</span>
-                <span class="text-[10px] px-2 py-0.5 rounded bg-amber-50 dark:bg-amber-950 text-amber-600 dark:text-amber-400 font-semibold">Agent Spec</span>
-                <span class="text-[10px] text-slate-400 font-mono">Python</span>
-              </div>
-              <p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-1">Framework spec-driven development kiểm chứng kiến trúc với Gemini và stress-test.</p>
-            </div>
-          </div>
-          <div class="text-right flex-shrink-0 pl-3">
-            <span class="text-xs font-bold text-slate-900 dark:text-white block font-mono">4.3k ★</span>
-            <span class="text-[10px] text-emerald-600 font-semibold font-mono">+1.6k/ngày</span>
+          <div class="text-right flex-shrink-0 pl-2">
+            <span class="text-xs font-bold text-slate-900 dark:text-white block font-mono">92k ★[span_12](start_span)[span_12](end_span)</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Main Content: Bài viết phân tích (1 Cột) -->
+  <!-- PHẦN 3: BÀI VIẾT PHÂN TÍCH KỸ THUẬT (1 CỘT) -->
   <main class="max-w-4xl mx-auto px-4 py-8 flex-grow w-full space-y-6">
     <div class="flex items-center justify-between">
-      <h2 class="text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2">
-        <i class="fa-solid fa-newspaper text-brand-600"></i> Bài Viết & Phân Tích Kỹ Thuật
+      <h2 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2">
+        <i class="fa-solid fa-newspaper text-brand-600"></i> Bài Viết & Phân Tích
       </h2>
-      <span class="text-xs text-slate-500">Đồng bộ từ TiniX & Open Source</span>
+      <span class="text-xs text-slate-500">Cập nhật liên tục</span>
     </div>
 
     <!-- Filter & Live Search Bar -->
@@ -349,18 +365,6 @@
         `,
         category: "LLM",
         stats: "92.6k Stars • 646 Ngôn ngữ",
-        repoUrl: "https://repo.tinix.ai/vi",
-        date: "2 ngày trước"
-      },
-      {
-        id: 5,
-        title: "interplains/Zero-Breach-Toolkit: Công cụ bảo mật mã nguồn mở phát hiện Spyware thương mại",
-        desc: "Bộ công cụ độc lập, không kết nối internet, quét tìm dấu vết các phần mềm gián điệp tinh vi như Pegasus, Graphite trên Windows, Android và iOS.",
-        content: `
-          <p>Một dự án mã nguồn mở thiết thực dành cho các nhà nghiên cứu bảo mật và người dùng muốn rà soát thiết bị cá nhân mà không sợ rò rỉ dữ liệu.</p>
-        `,
-        category: "Tools",
-        stats: "Zero-Network Security • Python",
         repoUrl: "https://repo.tinix.ai/vi",
         date: "2 ngày trước"
       }
