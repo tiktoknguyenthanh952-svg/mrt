@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nguyễn Thanh | Tech Blog & GitTrending Tracker</title>
-  <meta name="description" content="Blog cá nhân của Nguyễn Thanh - Theo dõi dự án mã nguồn mở thịnh hành, bảng xếp hạng công cụ và tin tức AI từ gittrending.com.">
+  <title>Nguyễn Thanh | Tech Blog & AI Tools Dashboard</title>
+  <meta name="description" content="Blog cá nhân của Nguyễn Thanh - Tin tức AI, bài viết kỹ thuật và bảng xếp hạng công cụ GitTrending.">
   <meta name="author" content="Nguyễn Thanh">
 
   <!-- Tailwind CSS CDN -->
@@ -34,7 +34,7 @@
 
   <!-- Header / Navigation -->
   <header class="sticky top-0 z-40 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
-    <div class="max-w-4xl mx-auto px-4 h-16 flex items-center justify-between gap-4">
+    <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between gap-4">
       <!-- Logo & Domain -->
       <a href="#" class="flex items-center gap-3 group flex-shrink-0">
         <div class="w-10 h-10 rounded-xl bg-brand-600 text-white flex items-center justify-center font-bold text-lg shadow-md shadow-brand-500/20 group-hover:scale-105 transition-transform">
@@ -48,17 +48,17 @@
 
       <!-- Quick Navigation -->
       <nav class="hidden sm:flex items-center gap-2 text-xs font-semibold">
-        <a href="#ai-news" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300 transition-colors">
-          <i class="fa-solid fa-bolt text-amber-500"></i>
-          Tin tức AI
-        </a>
-        <a href="#leaderboard" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300 transition-colors">
-          <i class="fa-solid fa-trophy text-amber-500"></i>
-          BXH Công cụ
-        </a>
         <a href="https://gittrending.com" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 border border-indigo-200 dark:border-indigo-800/80 hover:bg-indigo-100 transition-colors">
           <i class="fa-solid fa-arrow-trend-up"></i>
           GitTrending
+        </a>
+        <a href="https://aistudio.google.com" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300 transition-colors">
+          <i class="fa-solid fa-cube text-amber-500"></i>
+          Google AI Studio
+        </a>
+        <a href="https://gemini.google.com" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300 transition-colors">
+          <i class="fa-solid fa-wand-magic-sparkles text-sky-500"></i>
+          Gemini
         </a>
       </nav>
 
@@ -72,188 +72,215 @@
   </header>
 
   <!-- Hero Profile Section -->
-  <section class="max-w-4xl mx-auto px-4 pt-10 pb-6 w-full border-b border-slate-200 dark:border-slate-800">
+  <section class="max-w-6xl mx-auto px-4 pt-10 pb-6 w-full border-b border-slate-200 dark:border-slate-800">
     <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6 text-center sm:text-left">
       <div class="w-20 h-20 rounded-2xl bg-gradient-to-tr from-brand-600 via-indigo-500 to-sky-400 text-white flex items-center justify-center text-3xl shadow-xl shadow-brand-500/20 flex-shrink-0">
-        <i class="fa-solid fa-arrow-trend-up"></i>
+        <i class="fa-solid fa-brain"></i>
       </div>
       <div class="space-y-2 flex-grow">
         <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium bg-emerald-50 text-emerald-600 dark:bg-emerald-950/60 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800">
           <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-          Đồng bộ dữ liệu xu hướng từ GitTrending.com
+          Đồng bộ tin tức AI & Xếp hạng công cụ từ GitTrending.com
         </div>
         <h1 class="text-2xl sm:text-3xl font-extrabold tracking-tight">
-          Kho Dự Án GitTrending & Đột Phá Công Nghệ
+          Bản Tin AI & Bảng Xếp Hạng Công Cụ Nguồn Mở
         </h1>
         <p class="text-slate-600 dark:text-slate-400 text-sm sm:text-base leading-relaxed">
-          Ghi chép của <strong class="text-slate-900 dark:text-white">Nguyễn Thanh</strong>. Tuyển chọn các kho lưu trữ tăng trưởng sao nhanh nhất trên GitTrending, bảng xếp hạng công cụ lập trình và bản tin AI thế hệ mới.
+          Ghi chép của <strong class="text-slate-900 dark:text-white">Nguyễn Thanh</strong>. Theo dõi trực quan xu hướng công nghệ, phân tích dự án và công cụ bùng nổ theo thời gian thực.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- PHẦN 1: TIN TỨC AI NHANH (1 CỘT) -->
-  <section id="ai-news" class="max-w-4xl mx-auto px-4 pt-8 w-full">
-    <div class="bg-gradient-to-br from-indigo-50/50 to-slate-50 dark:from-slate-900 dark:to-slate-950 rounded-2xl border border-indigo-100 dark:border-slate-800 p-5 shadow-sm space-y-4">
-      <div class="flex items-center justify-between border-b border-indigo-100/60 dark:border-slate-800 pb-3">
-        <h2 class="text-base sm:text-lg font-bold flex items-center gap-2 text-slate-900 dark:text-white">
-          <i class="fa-solid fa-bolt text-amber-500"></i> Bản Tin AI Nhanh (Flash News)
-        </h2>
-        <span class="text-[11px] font-mono text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-950/60 px-2 py-0.5 rounded-full border border-indigo-200 dark:border-indigo-800">
-          Live Feed
-        </span>
-      </div>
+  <!-- KHUNG BỐ CỤC 2 CỘT (MAIN + CỘT CÔNG CỤ AI) -->
+  <div class="max-w-6xl mx-auto px-4 py-8 flex-grow w-full grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+    
+    <!-- ==================== CỘT TRÁI (BÀI VIẾT & TIN TỨC - 7/12) ==================== -->
+    <div class="lg:col-span-7 space-y-6">
 
-      <div class="space-y-3">
-        <!-- Tin 1 -->
-        <div class="p-3.5 rounded-xl bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800/80 hover:border-indigo-400/60 transition-all flex flex-col gap-1.5">
-          <div class="flex items-center justify-between text-xs">
-            <span class="font-semibold text-indigo-600 dark:text-indigo-400 flex items-center gap-1.5">
-              <span class="w-1.5 h-1.5 rounded-full bg-indigo-500"></span> Google AI & Gemini
-            </span>
-            <span class="text-slate-400 text-[11px]">Vừa cập nhật</span>
-          </div>
-          <h3 class="text-sm sm:text-base font-bold text-slate-900 dark:text-white">
-            Google AI Studio tích hợp Context Caching tối ưu chi phí token cho lập trình viên
-          </h3>
-          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-            Hỗ trợ xử lý ngữ cảnh hàng triệu token với độ trễ thấp, cho phép trích xuất mã nguồn mẫu trực tiếp để xây dựng hệ thống AI Agent trên nền web.
-          </p>
-        </div>
-
-        <!-- Tin 2 -->
-        <div class="p-3.5 rounded-xl bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800/80 hover:border-indigo-400/60 transition-all flex flex-col gap-1.5">
-          <div class="flex items-center justify-between text-xs">
-            <span class="font-semibold text-emerald-600 dark:text-emerald-400 flex items-center gap-1.5">
-              <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> GitTrending Insights
-            </span>
-            <span class="text-slate-400 text-[11px]">Hôm nay</span>
-          </div>
-          <h3 class="text-sm sm:text-base font-bold text-slate-900 dark:text-white">
-            Các dự án Agentic Reverse Engineering và Anti-Slop Design chiếm lĩnh vị trí dẫn đầu
-          </h3>
-          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-            Dữ liệu tăng trưởng từ GitTrending cho thấy các thư viện hỗ trợ AI Coding Agent và giải pháp bảo mật chạy offline đang nhận được lượng star lớn nhất cộng đồng[span_0](start_span)[span_0](end_span).
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PHẦN 2: BẢNG XẾP HẠNG CÔNG CỤ (LEADERBOARD - NGUỒN GITTRENDING) -->
-  <section id="leaderboard" class="max-w-4xl mx-auto px-4 pt-8 w-full">
-    <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-5 shadow-sm space-y-4">
-      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-100 dark:border-slate-800 pb-3">
-        <div>
-          <h2 class="text-base sm:text-lg font-bold flex items-center gap-2 text-slate-900 dark:text-white">
-            <i class="fa-solid fa-trophy text-amber-500"></i> Bảng Xếp Hạng GitTrending
+      <!-- Bản Tin AI Nhanh -->
+      <section class="bg-gradient-to-br from-indigo-50/50 to-slate-50 dark:from-slate-900 dark:to-slate-950 rounded-2xl border border-indigo-100 dark:border-slate-800 p-5 shadow-sm space-y-3">
+        <div class="flex items-center justify-between border-b border-indigo-100/60 dark:border-slate-800 pb-2.5">
+          <h2 class="text-base font-bold flex items-center gap-2 text-slate-900 dark:text-white">
+            <i class="fa-solid fa-bolt text-amber-500"></i> Bản Tin AI Nhanh (Flash News)
           </h2>
-          <p class="text-xs text-slate-500">Top các kho lưu trữ tăng trưởng nổi bật nhất được ghi nhận từ gittrending.com[span_1](start_span)[span_1](end_span).</p>
+          <span class="text-[10px] font-mono text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-950/60 px-2 py-0.5 rounded-full border border-indigo-200 dark:border-indigo-800">
+            Live
+          </span>
         </div>
-        <a href="https://gittrending.com" target="_blank" rel="noopener noreferrer" class="text-[11px] font-mono text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-950/50 px-2.5 py-1 rounded-md self-start sm:self-auto hover:underline flex items-center gap-1">
-          <span>Xem trên gittrending.com</span> <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
-        </a>
+
+        <div class="space-y-2.5">
+          <div class="p-3 rounded-xl bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800/80">
+            <div class="flex items-center justify-between text-[11px] mb-1">
+              <span class="font-semibold text-indigo-600 dark:text-indigo-400">Google AI & Gemini</span>
+              <span class="text-slate-400">Vừa cập nhật</span>
+            </div>
+            <p class="text-xs font-semibold text-slate-900 dark:text-white leading-snug">
+              Google AI Studio tích hợp Context Caching giúp giảm chi phí token và tăng tốc ứng dụng AI Agent.
+            </p>
+          </div>
+
+          <div class="p-3 rounded-xl bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800/80">
+            <div class="flex items-center justify-between text-[11px] mb-1">
+              <span class="font-semibold text-emerald-600 dark:text-emerald-400">Agentic IDE</span>
+              <span class="text-slate-400">Hôm nay</span>
+            </div>
+            <p class="text-xs font-semibold text-slate-900 dark:text-white leading-snug">
+              Làn sóng Spec-Driven Development cùng Antigravity thay đổi cách kiểm thử và sinh mã tự động.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Thanh Lọc & Tìm Kiếm Bài Viết -->
+      <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 bg-white dark:bg-slate-900 p-3 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
+        <div class="flex items-center gap-1.5 overflow-x-auto pb-1 sm:pb-0" id="category-filters">
+          <button onclick="filterCategory('All')" class="category-btn active px-3 py-1.5 text-xs font-semibold rounded-xl bg-brand-600 text-white transition-colors" data-cat="All">Tất cả</button>
+          <button onclick="filterCategory('AI Agent')" class="category-btn px-3 py-1.5 text-xs font-semibold rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors" data-cat="AI Agent">#AI Agent</button>
+          <button onclick="filterCategory('LLM')" class="category-btn px-3 py-1.5 text-xs font-semibold rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors" data-cat="LLM">#LLM</button>
+          <button onclick="filterCategory('Tools')" class="category-btn px-3 py-1.5 text-xs font-semibold rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors" data-cat="Tools">#Tools</button>
+        </div>
+
+        <div class="relative w-full sm:w-56">
+          <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-xs text-slate-400"></i>
+          <input type="text" id="search-input" oninput="searchPosts()" placeholder="Tìm bài viết..." class="w-full pl-8 pr-3 py-1.5 text-xs rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 focus:outline-none focus:ring-2 focus:ring-brand-500">
+        </div>
       </div>
 
-      <!-- Leaderboard List Items -->
-      <div class="space-y-2.5">
-        <!-- Top 1 -->
-        <div class="flex items-center justify-between p-3.5 rounded-xl bg-slate-50 dark:bg-slate-950/60 border border-slate-100 dark:border-slate-800 hover:border-brand-500/50 transition-all">
-          <div class="flex items-center gap-3.5">
-            <span class="w-7 h-7 rounded-lg bg-amber-500 text-slate-950 font-black text-xs flex items-center justify-center flex-shrink-0">
-              #1
-            </span>
-            <div>
-              <div class="flex items-center gap-2 flex-wrap">
-                <span class="font-bold text-sm text-slate-900 dark:text-white">morluto/rea</span>
-                <span class="text-[10px] px-2 py-0.5 rounded bg-brand-50 dark:bg-brand-950 text-brand-600 dark:text-brand-400 font-semibold">AI Agent[span_2](start_span)[span_2](end_span)</span>
-                <span class="text-[10px] text-slate-400 font-mono">TypeScript[span_3](start_span)[span_3](end_span)</span>
+      <!-- Danh Sách Bài Viết (Feed Cột Trái) -->
+      <div id="posts-container" class="space-y-4">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+
+    <!-- ==================== CỘT PHẢI: BẢNG XẾP HẠNG CÔNG CỤ AI (5/12 - STICKY) ==================== -->
+    <aside class="lg:col-span-5 lg:sticky lg:top-24 space-y-4">
+      <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-5 shadow-sm space-y-4">
+        
+        <div class="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-3">
+          <div>
+            <h2 class="text-base font-bold flex items-center gap-2 text-slate-900 dark:text-white">
+              <i class="fa-solid fa-trophy text-amber-500"></i> Bảng Công Cụ AI Hot
+            </h2>
+            <p class="text-[11px] text-slate-500">Xếp hạng theo độ tăng trưởng GitTrending</p>
+          </div>
+          <a href="https://gittrending.com" target="_blank" rel="noopener noreferrer" class="text-[11px] font-mono text-indigo-600 dark:text-indigo-400 hover:underline flex items-center gap-1">
+            <span>gittrending.com</span> <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+          </a>
+        </div>
+
+        <!-- Danh sách các công cụ AI xếp hạng -->
+        <div class="space-y-2.5">
+          <!-- Công cụ 1 -->
+          <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-950/60 border border-slate-100 dark:border-slate-800 hover:border-brand-500/50 transition-all flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <span class="w-6 h-6 rounded-lg bg-amber-500 text-slate-950 font-black text-xs flex items-center justify-center flex-shrink-0">
+                1
+              </span>
+              <div>
+                <div class="flex items-center gap-1.5 flex-wrap">
+                  <span class="font-bold text-xs text-slate-900 dark:text-white">morluto/rea</span>
+                  <span class="text-[9px] px-1.5 py-0.2 rounded bg-brand-50 dark:bg-brand-950 text-brand-600 dark:text-brand-400 font-semibold">AI Agent</span>
+                </div>
+                <p class="text-[11px] text-slate-500 dark:text-slate-400 line-clamp-1">Reverse engineer từ app behavior đến native binaries.</p>
               </div>
-              <p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-1">Reverse engineer mọi thứ bằng AI agents từ app behavior đến native binary[span_4](start_span)[span_4](end_span).</p>
+            </div>
+            <div class="text-right flex-shrink-0 pl-2">
+              <span class="text-xs font-bold text-slate-900 dark:text-white block font-mono">401k ★</span>
+              <span class="text-[9px] text-emerald-600 font-mono">+5.3k/d</span>
             </div>
           </div>
-          <div class="text-right flex-shrink-0 pl-3">
-            <span class="text-xs font-bold text-slate-900 dark:text-white block font-mono">401k ★[span_5](start_span)[span_5](end_span)</span>
-            <span class="text-[10px] text-emerald-600 font-semibold font-mono">+5.3k/ngày[span_6](start_span)[span_6](end_span)</span>
-          </div>
-        </div>
 
-        <!-- Top 2 -->
-        <div class="flex items-center justify-between p-3.5 rounded-xl bg-slate-50 dark:bg-slate-950/60 border border-slate-100 dark:border-slate-800 hover:border-brand-500/50 transition-all">
-          <div class="flex items-center gap-3.5">
-            <span class="w-7 h-7 rounded-lg bg-slate-300 dark:bg-slate-700 text-slate-900 dark:text-white font-black text-xs flex items-center justify-center flex-shrink-0">
-              #2
-            </span>
-            <div>
-              <div class="flex items-center gap-2 flex-wrap">
-                <span class="font-bold text-sm text-slate-900 dark:text-white">debpalash/VoiceStudio</span>
-                <span class="text-[10px] px-2 py-0.5 rounded bg-sky-50 dark:bg-sky-950 text-sky-600 dark:text-sky-400 font-semibold">Audio AI[span_7](start_span)[span_7](end_span)</span>
-                <span class="text-[10px] text-slate-400 font-mono">Python[span_8](start_span)[span_8](end_span)</span>
+          <!-- Công cụ 2 -->
+          <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-950/60 border border-slate-100 dark:border-slate-800 hover:border-brand-500/50 transition-all flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <span class="w-6 h-6 rounded-lg bg-slate-300 dark:bg-slate-700 text-slate-900 dark:text-white font-bold text-xs flex items-center justify-center flex-shrink-0">
+                2
+              </span>
+              <div>
+                <div class="flex items-center gap-1.5 flex-wrap">
+                  <span class="font-bold text-xs text-slate-900 dark:text-white">VoiceStudio</span>
+                  <span class="text-[9px] px-1.5 py-0.2 rounded bg-sky-50 dark:bg-sky-950 text-sky-600 dark:text-sky-400 font-semibold">Audio AI</span>
+                </div>
+                <p class="text-[11px] text-slate-500 dark:text-slate-400 line-clamp-1">Voice clone offline thay thế ElevenLabs mã nguồn mở.</p>
               </div>
-              <p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-1">Giải pháp thay thế ElevenLabs mã nguồn mở, voice cloning chạy offline 100%[span_9](start_span)[span_9](end_span).</p>
+            </div>
+            <div class="text-right flex-shrink-0 pl-2">
+              <span class="text-xs font-bold text-slate-900 dark:text-white block font-mono">92k ★</span>
+              <span class="text-[9px] text-emerald-600 font-mono">+1.7k/d</span>
             </div>
           </div>
-          <div class="text-right flex-shrink-0 pl-3">
-            <span class="text-xs font-bold text-slate-900 dark:text-white block font-mono">92k ★[span_10](start_span)[span_10](end_span)</span>
-            <span class="text-[10px] text-emerald-600 font-semibold font-mono">+1.7k/ngày[span_11](start_span)[span_11](end_span)</span>
-          </div>
-        </div>
 
-        <!-- Top 3 -->
-        <div class="flex items-center justify-between p-3.5 rounded-xl bg-slate-50 dark:bg-slate-950/60 border border-slate-100 dark:border-slate-800 hover:border-brand-500/50 transition-all">
-          <div class="flex items-center gap-3.5">
-            <span class="w-7 h-7 rounded-lg bg-amber-700/60 text-amber-200 font-black text-xs flex items-center justify-center flex-shrink-0">
-              #3
-            </span>
-            <div>
-              <div class="flex items-center gap-2 flex-wrap">
-                <span class="font-bold text-sm text-slate-900 dark:text-white">pbakaus/impeccable</span>
-                <span class="text-[10px] px-2 py-0.5 rounded bg-purple-50 dark:bg-purple-950 text-purple-600 dark:text-purple-400 font-semibold">Dev Tools[span_12](start_span)[span_12](end_span)</span>
-                <span class="text-[10px] text-slate-400 font-mono">Rust[span_13](start_span)[span_13](end_span)</span>
+          <!-- Công cụ 3 -->
+          <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-950/60 border border-slate-100 dark:border-slate-800 hover:border-brand-500/50 transition-all flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <span class="w-6 h-6 rounded-lg bg-amber-700/60 text-amber-200 font-bold text-xs flex items-center justify-center flex-shrink-0">
+                3
+              </span>
+              <div>
+                <div class="flex items-center gap-1.5 flex-wrap">
+                  <span class="font-bold text-xs text-slate-900 dark:text-white">pbakaus/impeccable</span>
+                  <span class="text-[9px] px-1.5 py-0.2 rounded bg-purple-50 dark:bg-purple-950 text-purple-600 dark:text-purple-400 font-semibold">Dev Tools</span>
+                </div>
+                <p class="text-[11px] text-slate-500 dark:text-slate-400 line-clamp-1">Ngôn ngữ thiết kế cho coding agent, chống AI-slop.</p>
               </div>
-              <p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-1">Ngôn ngữ thiết kế cho AI coding agent với 44 quy tắc kiểm tra thẩm mỹ[span_14](start_span)[span_14](end_span).</p>
+            </div>
+            <div class="text-right flex-shrink-0 pl-2">
+              <span class="text-xs font-bold text-slate-900 dark:text-white block font-mono">92k ★</span>
+              <span class="text-[9px] text-emerald-600 font-mono">+1.9k/d</span>
             </div>
           </div>
-          <div class="text-right flex-shrink-0 pl-3">
-            <span class="text-xs font-bold text-slate-900 dark:text-white block font-mono">92k ★[span_15](start_span)[span_15](end_span)</span>
-            <span class="text-[10px] text-emerald-600 font-semibold font-mono">+1.9k/ngày[span_16](start_span)[span_16](end_span)</span>
+
+          <!-- Công cụ 4 -->
+          <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-950/60 border border-slate-100 dark:border-slate-800 hover:border-brand-500/50 transition-all flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <span class="w-6 h-6 rounded-lg bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-bold text-xs flex items-center justify-center flex-shrink-0">
+                4
+              </span>
+              <div>
+                <div class="flex items-center gap-1.5 flex-wrap">
+                  <span class="font-bold text-xs text-slate-900 dark:text-white">security-audit-skill</span>
+                  <span class="text-[9px] px-1.5 py-0.2 rounded bg-emerald-50 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400 font-semibold">Cloudflare</span>
+                </div>
+                <p class="text-[11px] text-slate-500 dark:text-slate-400 line-clamp-1">Biến AI agent thành chuyên gia audit bảo mật 6 pha.</p>
+              </div>
+            </div>
+            <div class="text-right flex-shrink-0 pl-2">
+              <span class="text-xs font-bold text-slate-900 dark:text-white block font-mono">51k ★</span>
+              <span class="text-[9px] text-emerald-600 font-mono">+1.5k/d</span>
+            </div>
+          </div>
+
+          <!-- Công cụ 5 -->
+          <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-950/60 border border-slate-100 dark:border-slate-800 hover:border-brand-500/50 transition-all flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <span class="w-6 h-6 rounded-lg bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-bold text-xs flex items-center justify-center flex-shrink-0">
+                5
+              </span>
+              <div>
+                <div class="flex items-center gap-1.5 flex-wrap">
+                  <span class="font-bold text-xs text-slate-900 dark:text-white">elephant-goldfish</span>
+                  <span class="text-[9px] px-1.5 py-0.2 rounded bg-amber-50 dark:bg-amber-950 text-amber-600 dark:text-amber-400 font-semibold">Google</span>
+                </div>
+                <p class="text-[11px] text-slate-500 dark:text-slate-400 line-clamp-1">Framework spec-driven với Gemini stress-test thiết kế.</p>
+              </div>
+            </div>
+            <div class="text-right flex-shrink-0 pl-2">
+              <span class="text-xs font-bold text-slate-900 dark:text-white block font-mono">4.3k ★</span>
+              <span class="text-[9px] text-emerald-600 font-mono">+1.6k/d</span>
+            </div>
           </div>
         </div>
+
+        <div class="pt-2">
+          <a href="https://gittrending.com" target="_blank" rel="noopener noreferrer" class="w-full py-2 px-3 text-xs font-semibold rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 transition-colors flex items-center justify-center gap-1.5">
+            Xem thêm trên GitTrending <i class="fa-solid fa-arrow-right text-[10px]"></i>
+          </a>
+        </div>
       </div>
-    </div>
-  </section>
+    </aside>
 
-  <!-- PHẦN 3: BÀI VIẾT PHÂN TÍCH (1 CỘT DUY NHẤT) -->
-  <main class="max-w-4xl mx-auto px-4 py-8 flex-grow w-full space-y-6">
-    <div class="flex items-center justify-between">
-      <h2 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2">
-        <i class="fa-solid fa-newspaper text-brand-600"></i> Bài Viết & Phân Tích Dự Án
-      </h2>
-      <span class="text-xs text-slate-500">Nguồn: gittrending.com</span>
-    </div>
-
-    <!-- Filter & Live Search Bar -->
-    <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 bg-white dark:bg-slate-900 p-3 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
-      <!-- Category Badges -->
-      <div class="flex items-center gap-1.5 overflow-x-auto pb-1 sm:pb-0" id="category-filters">
-        <button onclick="filterCategory('All')" class="category-btn active px-3 py-1.5 text-xs font-semibold rounded-xl bg-brand-600 text-white transition-colors" data-cat="All">Tất cả</button>
-        <button onclick="filterCategory('AI Agent')" class="category-btn px-3 py-1.5 text-xs font-semibold rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors" data-cat="AI Agent">#AI Agent</button>
-        <button onclick="filterCategory('LLM')" class="category-btn px-3 py-1.5 text-xs font-semibold rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors" data-cat="LLM">#LLM</button>
-        <button onclick="filterCategory('Tools')" class="category-btn px-3 py-1.5 text-xs font-semibold rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors" data-cat="Tools">#Tools</button>
-      </div>
-
-      <!-- Search Input -->
-      <div class="relative w-full sm:w-64">
-        <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-xs text-slate-400"></i>
-        <input type="text" id="search-input" oninput="searchPosts()" placeholder="Tìm kiếm dự án, repo..." class="w-full pl-9 pr-4 py-1.5 text-xs rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 focus:outline-none focus:ring-2 focus:ring-brand-500">
-      </div>
-    </div>
-
-    <!-- Posts Feed: 1 CỘT DUY NHẤT -->
-    <div id="posts-container" class="space-y-4">
-      <!-- Dynamic render by JS -->
-    </div>
-  </main>
+  </div>
 
   <!-- Modal Đọc bài viết chi tiết -->
   <div id="reading-modal" class="fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-sm p-4 overflow-y-auto flex items-center justify-center">
@@ -277,7 +304,7 @@
 
   <!-- Footer -->
   <footer class="border-t border-slate-200 dark:border-slate-800 py-8 bg-white dark:bg-slate-900/40 text-slate-500 text-xs mt-10">
-    <div class="max-w-4xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
       <p>© 2026 Nguyễn Thanh. Tên miền <span class="font-mono text-slate-700 dark:text-slate-300">nguyenthanhazt.tech</span>.</p>
       
       <div class="flex items-center gap-4">
@@ -356,43 +383,43 @@
 
     let currentFilter = 'All';
 
-    // Render danh sách theo dạng 1 cột (Single Column Feed)
+    // Render danh sách bài viết ở cột chính
     function renderPosts(list) {
       const container = document.getElementById('posts-container');
       if (!list.length) {
         container.innerHTML = `
-          <div class="py-16 text-center text-slate-400 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800">
-            <i class="fa-regular fa-folder-open text-3xl mb-2"></i>
-            <p>Không tìm thấy bài viết phù hợp.</p>
+          <div class="py-12 text-center text-slate-400 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800">
+            <i class="fa-regular fa-folder-open text-2xl mb-1"></i>
+            <p class="text-xs">Không tìm thấy bài viết phù hợp.</p>
           </div>
         `;
         return;
       }
 
       container.innerHTML = list.map(p => `
-        <article class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 hover:border-brand-500/50 hover:shadow-md transition-all group">
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs mb-3">
+        <article class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-5 hover:border-brand-500/50 hover:shadow-sm transition-all group">
+          <div class="flex items-center justify-between text-xs mb-2.5">
             <div class="flex items-center gap-2">
-              <span class="px-2.5 py-1 rounded-lg bg-brand-50 dark:bg-brand-950/60 text-brand-600 dark:text-brand-400 font-semibold">${p.category}</span>
-              <span class="text-slate-400 font-mono"><i class="fa-solid fa-fire text-amber-500 mr-1"></i>${p.stats}</span>
+              <span class="px-2 py-0.5 rounded-md bg-brand-50 dark:bg-brand-950/60 text-brand-600 dark:text-brand-400 font-semibold text-[11px]">${p.category}</span>
+              <span class="text-slate-400 font-mono text-[11px]"><i class="fa-solid fa-fire text-amber-500 mr-1"></i>${p.stats}</span>
             </div>
-            <span class="text-slate-400 text-[11px]">${p.date}</span>
+            <span class="text-slate-400 text-[10px]">${p.date}</span>
           </div>
 
-          <h3 class="text-lg sm:text-xl font-bold group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors leading-snug cursor-pointer mb-2" onclick="openModal(${p.id})">
+          <h3 class="text-base sm:text-lg font-bold group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors leading-snug cursor-pointer mb-2" onclick="openModal(${p.id})">
             ${p.title}
           </h3>
 
-          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-3">
             ${p.desc}
           </p>
 
-          <div class="flex items-center justify-between pt-3 border-t border-slate-100 dark:border-slate-800/80 text-xs">
-            <button onclick="openModal(${p.id})" class="font-semibold text-brand-600 dark:text-brand-400 hover:underline flex items-center gap-1.5">
-              Đọc tóm tắt chi tiết <i class="fa-solid fa-arrow-right text-[10px]"></i>
+          <div class="flex items-center justify-between pt-2.5 border-t border-slate-100 dark:border-slate-800/80 text-xs">
+            <button onclick="openModal(${p.id})" class="font-semibold text-brand-600 dark:text-brand-400 hover:underline flex items-center gap-1">
+              Đọc tóm tắt <i class="fa-solid fa-arrow-right text-[10px]"></i>
             </button>
-            <a href="${p.repoUrl}" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-slate-800 dark:hover:text-slate-200 flex items-center gap-1">
-              <i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i> Xem trên GitTrending
+            <a href="${p.repoUrl}" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-slate-800 dark:hover:text-slate-200 flex items-center gap-1 text-[11px]">
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i> GitTrending
             </a>
           </div>
         </article>
@@ -464,7 +491,7 @@
       }
     });
 
-    // Tải danh sách bài viết ban đầu
+    // Khởi tạo
     renderPosts(posts);
   </script>
 </body>
