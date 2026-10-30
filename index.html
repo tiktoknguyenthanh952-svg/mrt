@@ -3,19 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nguyễn Thanh | Tech Blog & AI Ecosystem</title>
-  <meta name="description" content="Blog cá nhân của Nguyễn Thanh - Tổng hợp các mô hình AI ChatGPT, Gemini, Claude, Dola AI, Bảng xếp hạng GitTrending và Kỹ thuật phần mềm.">
-  <meta name="keywords" content="AI, ChatGPT, Gemini, Claude, Dola AI, Trí tuệ nhân tạo, LLM, GitTrending, lập trình, công cụ AI">
+  <title>Nguyễn Thanh | Tech Blog & Open-Source Trending</title>
+  <meta name="description" content="Blog cá nhân của Nguyễn Thanh - Tổng hợp các dự án mã nguồn mở thịnh hành từ TiniX Repo Trending, GitHub và AI Engineering.">
   <meta name="author" content="Nguyễn Thanh">
-  
-  <!-- Open Graph / Social Media -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Nguyễn Thanh | Tech Blog & AI Ecosystem">
-  <meta property="og:description" content="Tổng hợp các mô hình AI hàng đầu và công cụ lập trình mã nguồn mở.">
-  <meta property="og:locale" content="vi_VN">
-  
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -34,39 +24,17 @@
               600: '#4f46e5',
               700: '#4338ca',
             }
-          },
-          fontFamily: {
-            sans: ['Inter', 'system-ui', 'sans-serif'],
           }
         }
       }
     }
   </script>
-
-  <style type="text/tailwindcss">
-    @layer utilities {
-      .content-auto {
-        content-visibility: auto;
-      }
-      .card-hover {
-        @apply hover:shadow-md hover:scale-[1.01] transition-all duration-200;
-      }
-    }
-
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(12px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .fade-in-up {
-      animation: fadeInUp 0.5s ease forwards;
-    }
-  </style>
 </head>
 <body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 min-h-screen flex flex-col font-sans transition-colors duration-200">
 
   <!-- Header / Navigation -->
   <header class="sticky top-0 z-40 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
-    <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between gap-4">
+    <div class="max-w-4xl mx-auto px-4 h-16 flex items-center justify-between gap-4">
       <!-- Logo & Domain -->
       <a href="#" class="flex items-center gap-3 group flex-shrink-0">
         <div class="w-10 h-10 rounded-xl bg-brand-600 text-white flex items-center justify-center font-bold text-lg shadow-md shadow-brand-500/20 group-hover:scale-105 transition-transform">
@@ -78,19 +46,19 @@
         </div>
       </a>
 
-      <!-- Quick Navigation -->
-      <nav class="hidden md:flex items-center gap-2 text-xs font-semibold">
-        <a href="#ai-models" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300 transition-colors">
-          <i class="fa-solid fa-shapes text-indigo-500"></i>
-          Mô hình AI
+      <!-- Quick Links -->
+      <nav class="hidden sm:flex items-center gap-2 text-xs font-semibold">
+        <a href="https://repo.tinix.ai/vi" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 border border-indigo-200 dark:border-indigo-800/80 hover:bg-indigo-100 transition-colors">
+          <i class="fa-solid fa-arrow-trend-up"></i>
+          TiniX Trending
         </a>
-        <a href="#ai-news" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300 transition-colors">
-          <i class="fa-solid fa-bolt text-amber-500"></i>
-          Tin tức AI
+        <a href="https://aistudio.google.com" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300 transition-colors">
+          <i class="fa-solid fa-cube text-amber-500"></i>
+          AI Studio
         </a>
-        <a href="#leaderboard" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300 transition-colors">
-          <i class="fa-solid fa-trophy text-amber-500"></i>
-          BXH Công cụ
+        <a href="https://gemini.google.com" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300 transition-colors">
+          <i class="fa-solid fa-wand-magic-sparkles text-sky-500"></i>
+          Gemini
         </a>
       </nav>
 
@@ -104,153 +72,281 @@
   </header>
 
   <!-- Hero Profile Section -->
-  <section class="max-w-6xl mx-auto px-4 pt-10 pb-6 w-full border-b border-slate-200 dark:border-slate-800 fade-in-up">
+  <section class="max-w-4xl mx-auto px-4 pt-10 pb-6 w-full border-b border-slate-200 dark:border-slate-800">
     <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6 text-center sm:text-left">
       <div class="w-20 h-20 rounded-2xl bg-gradient-to-tr from-brand-600 via-indigo-500 to-sky-400 text-white flex items-center justify-center text-3xl shadow-xl shadow-brand-500/20 flex-shrink-0">
-        <i class="fa-solid fa-brain"></i>
+        <i class="fa-solid fa-laptop-code"></i>
       </div>
       <div class="space-y-2 flex-grow">
         <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium bg-emerald-50 text-emerald-600 dark:bg-emerald-950/60 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800">
           <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-          Đồng bộ các mô hình AI thế hệ mới & Trợ lý thông minh
+          Đồng bộ tin tức từ TiniX Repo Trending & Open Source
         </div>
         <h1 class="text-2xl sm:text-3xl font-extrabold tracking-tight">
-          Hệ Sinh Thái Mô Hình AI & Công Cụ Lập Trình
+          Bản tin Công nghệ & Kho dự án Nguồn mở
         </h1>
         <p class="text-slate-600 dark:text-slate-400 text-sm sm:text-base leading-relaxed">
-          Ghi chép của <strong class="text-slate-900 dark:text-white">Nguyễn Thanh</strong>. Tổng hợp và kết nối trực tiếp các trợ lý AI hàng đầu: ChatGPT, Google Gemini, Claude, Dola AI cùng các dự án mã nguồn mở bùng nổ từ GitTrending.
+          Ghi chép của <strong class="text-slate-900 dark:text-white">Nguyễn Thanh</strong>. Tuyển chọn các dự án bùng nổ sao trên GitHub, mô hình AI mới và kỹ thuật phân tích mã nguồn theo thời gian thực.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- KHU VỰC CÁC MÔ HÌNH AI HÀNG ĐẦU -->
-  <section id="ai-models" class="max-w-6xl mx-auto px-4 pt-8 w-full fade-in-up" style="animation-delay: 0.1s;">
-    <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-5 shadow-sm space-y-4">
-      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-100 dark:border-slate-800 pb-3">
-        <div>
-          <h2 class="text-base sm:text-lg font-bold flex items-center gap-2 text-slate-900 dark:text-white">
-            <i class="fa-solid fa-shapes text-indigo-500"></i> Các Mô Hình & Trợ Lý AI Nổi Bật
-          </h2>
-          <p class="text-xs text-slate-500">Truy cập nhanh các nền tảng trí tuệ nhân tạo và mô hình ngôn ngữ lớn (LLM) phổ biến nhất hiện nay.</p>
-        </div>
-        <span class="text-[11px] font-mono text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-950/50 px-2.5 py-1 rounded-md self-start sm:self-auto">
-          ● Đang hoạt động
-        </span>
+  <!-- Main Content: Bố cục 1 cột (Single Column Layout) -->
+  <main class="max-w-4xl mx-auto px-4 py-8 flex-grow w-full space-y-6">
+    
+    <!-- Filter & Live Search Bar -->
+    <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 bg-white dark:bg-slate-900 p-3 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
+      <!-- Category Badges -->
+      <div class="flex items-center gap-1.5 overflow-x-auto pb-1 sm:pb-0" id="category-filters">
+        <button onclick="filterCategory('All')" class="category-btn active px-3 py-1.5 text-xs font-semibold rounded-xl bg-brand-600 text-white transition-colors" data-cat="All">Tất cả</button>
+        <button onclick="filterCategory('AI Agent')" class="category-btn px-3 py-1.5 text-xs font-semibold rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors" data-cat="AI Agent">#AI Agent</button>
+        <button onclick="filterCategory('LLM')" class="category-btn px-3 py-1.5 text-xs font-semibold rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors" data-cat="LLM">#LLM</button>
+        <button onclick="filterCategory('Tools')" class="category-btn px-3 py-1.5 text-xs font-semibold rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors" data-cat="Tools">#Tools</button>
       </div>
 
-      <!-- Grid các trợ lý AI -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3.5">
-        
-        <!-- 1. ChatGPT -->
-        <a href="https://chatgpt.com" target="_blank" rel="noopener noreferrer" class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-950/60 border border-slate-100 dark:border-slate-800 hover:border-emerald-500 hover:shadow-sm transition-all group flex flex-col justify-between card-hover">
-          <div class="space-y-2">
-            <div class="flex items-center justify-between">
-              <div class="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold text-sm">
-                <i class="fa-solid fa-comments"></i>
-              </div>
-              <span class="text-[10px] text-slate-400 font-mono">OpenAI • Mỹ</span>
-            </div>
-            <div>
-              <h3 class="text-sm font-bold text-slate-900 dark:text-white group-hover:text-emerald-600 transition-colors flex items-center gap-1.5">
-                ChatGPT
-                <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-slate-400"></i>
-              </h3>
-              <p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-4 mt-1">
-                <strong>Phiên bản:</strong> GPT-4o / GPT-4o mini<br>
-                <strong>Điểm mạnh:</strong> Suy luận logic xuất sắc, viết & debug code, phân tích tài liệu, tạo nội dung đa dạng.<br>
-                <strong>Phù hợp:</strong> Lập trình viên, học tập, công việc văn phòng, sáng tạo nội dung.
-              </p>
-            </div>
-          </div>
-          <span class="text-[10px] text-emerald-600 dark:text-emerald-400 font-semibold pt-2 flex items-center gap-1">
-            Mở chatgpt.com <i class="fa-solid fa-arrow-right text-[8px]"></i>
-          </span>
-        </a>
+      <!-- Search Input -->
+      <div class="relative w-full sm:w-64">
+        <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-xs text-slate-400"></i>
+        <input type="text" id="search-input" oninput="searchPosts()" placeholder="Tìm kiếm bài viết..." class="w-full pl-9 pr-4 py-1.5 text-xs rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 focus:outline-none focus:ring-2 focus:ring-brand-500">
+      </div>
+    </div>
 
-        <!-- 2. Google Gemini -->
-        <a href="https://gemini.google.com" target="_blank" rel="noopener noreferrer" class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-950/60 border border-slate-100 dark:border-slate-800 hover:border-sky-500 hover:shadow-sm transition-all group flex flex-col justify-between card-hover">
-          <div class="space-y-2">
-            <div class="flex items-center justify-between">
-              <div class="w-8 h-8 rounded-lg bg-sky-500/10 text-sky-600 dark:text-sky-400 flex items-center justify-center font-bold text-sm">
-                <i class="fa-solid fa-wand-magic-sparkles"></i>
-              </div>
-              <span class="text-[10px] text-slate-400 font-mono">Google • Mỹ</span>
-            </div>
-            <div>
-              <h3 class="text-sm font-bold text-slate-900 dark:text-white group-hover:text-sky-600 transition-colors flex items-center gap-1.5">
-                Google Gemini
-                <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-slate-400"></i>
-              </h3>
-              <p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-4 mt-1">
-                <strong>Phiên bản:</strong> Gemini 2.5 Pro / Ultra<br>
-                <strong>Điểm mạnh:</strong> Ngữ cảnh siêu dài (triệu token), đa phương thức mạnh, tích hợp Google Search, phân tích ảnh/video xuất sắc.<br>
-                <strong>Phù hợp:</strong> Phân tích dữ liệu lớn, nghiên cứu, nội dung đa phương tiện.
-              </p>
-            </div>
-          </div>
-          <span class="text-[10px] text-sky-600 dark:text-sky-400 font-semibold pt-2 flex items-center gap-1">
-            Mở gemini.google.com <i class="fa-solid fa-arrow-right text-[8px]"></i>
-          </span>
-        </a>
+    <!-- Posts Feed: 1 CỘT DUY NHẤT -->
+    <div id="posts-container" class="space-y-4">
+      <!-- Dynamic render by JS -->
+    </div>
+  </main>
 
-        <!-- 3. Dola AI -->
-        <a href="https://www.dola.com/chat/" target="_blank" rel="noopener noreferrer" class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-950/60 border border-slate-100 dark:border-slate-800 hover:border-purple-500 hover:shadow-sm transition-all group flex flex-col justify-between card-hover">
-          <div class="space-y-2">
-            <div class="flex items-center justify-between">
-              <div class="w-8 h-8 rounded-lg bg-purple-500/10 text-purple-600 dark:text-purple-400 flex items-center justify-center font-bold text-sm">
-                <i class="fa-solid fa-robot"></i>
-              </div>
-              <span class="text-[10px] text-slate-400 font-mono">ByteDance</span>
-            </div>
-            <div>
-              <h3 class="text-sm font-bold text-slate-900 dark:text-white group-hover:text-purple-600 transition-colors flex items-center gap-1.5">
-                Dola AI
-                <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-slate-400"></i>
-              </h3>
-              <p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-4 mt-1">
-                <strong>Trước đây:</strong> Cici<br>
-                <strong>Điểm mạnh:</strong> Tiếng Việt cực tự nhiên, đọc/tóm tắt PDF, dịch thuật, tạo ảnh AI miễn phí.<br>
-                <strong>Phù hợp:</strong> Người dùng Việt, học tập hàng ngày, làm việc với tài liệu nhanh.
-              </p>
-            </div>
-          </div>
-          <span class="text-[10px] text-purple-600 dark:text-purple-400 font-semibold pt-2 flex items-center gap-1">
-            Mở dola.com <i class="fa-solid fa-arrow-right text-[8px]"></i>
-          </span>
-        </a>
+  <!-- Modal Đọc bài viết chi tiết -->
+  <div id="reading-modal" class="fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-sm p-4 overflow-y-auto flex items-center justify-center">
+    <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl max-w-2xl w-full p-6 sm:p-8 relative shadow-2xl space-y-4 max-h-[90vh] overflow-y-auto">
+      <button onclick="closeModal()" class="absolute top-4 right-4 p-2 text-slate-400 hover:text-slate-700 dark:hover:text-white rounded-lg">
+        <i class="fa-solid fa-xmark text-lg"></i>
+      </button>
 
-        <!-- 4. Claude AI -->
-        <a href="https://claude.ai" target="_blank" rel="noopener noreferrer" class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-950/60 border border-slate-100 dark:border-slate-800 hover:border-amber-500 hover:shadow-sm transition-all group flex flex-col justify-between card-hover">
-          <div class="space-y-2">
-            <div class="flex items-center justify-between">
-              <div class="w-8 h-8 rounded-lg bg-amber-500/10 text-amber-600 dark:text-amber-400 flex items-center justify-center font-bold text-sm">
-                <i class="fa-solid fa-code"></i>
-              </div>
-              <span class="text-[10px] text-slate-400 font-mono">Anthropic • Mỹ</span>
-            </div>
-            <div>
-              <h3 class="text-sm font-bold text-slate-900 dark:text-white group-hover:text-amber-600 transition-colors flex items-center gap-1.5">
-                Claude AI
-                <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-slate-400"></i>
-              </h3>
-              <p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-4 mt-1">
-                <strong>Phiên bản:</strong> Claude 3.7 Sonnet / Opus<br>
-                <strong>Điểm mạnh:</strong> Xử lý tài liệu cực lớn, trung thực thông tin cao, Artifacts tương tác, hỗ trợ lập trình chi tiết.<br>
-                <strong>Phù hợp:</strong> Phân tích hợp đồng, dự án lớn, lập trình phức tạp.
-              </p>
-            </div>
-          </div>
-          <span class="text-[10px] text-amber-600 dark:text-amber-400 font-semibold pt-2 flex items-center gap-1">
-            Mở claude.ai <i class="fa-solid fa-arrow-right text-[8px]"></i>
-          </span>
-        </a>
+      <div class="flex items-center gap-2 text-xs text-brand-600 dark:text-brand-400 font-semibold uppercase" id="modal-category">Category</div>
+      <h2 id="modal-title" class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white leading-tight">Title</h2>
+      <div class="flex items-center gap-4 text-xs text-slate-400 border-b border-slate-100 dark:border-slate-800 pb-3">
+        <span id="modal-author"><i class="fa-solid fa-user-pen mr-1"></i> Nguyễn Thanh</span>
+        <span id="modal-date"><i class="fa-solid fa-clock mr-1"></i> Vừa cập nhật</span>
+      </div>
 
-        <!-- 5. Perplexity AI -->
-        <a href="https://www.perplexity.ai" target="_blank" rel="noopener noreferrer" class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-950/60 border border-slate-100 dark:border-slate-800 hover:border-rose-500 hover:shadow-sm transition-all group flex flex-col justify-between card-hover">
-          <div class="space-y-2">
-            <div class="flex items-center justify-between">
-              <div class="w-8 h-8 rounded-lg bg-rose-500/10 text-rose-600 dark:text-rose-400 flex items-center justify-center font-bold text-sm">
-                <i class="fa-solid fa-magnifying-glass"></i>
-              </div>
-              <span class="text-[10px] text-slate-400 font-mono">Perplexity AI
+      <div id="modal-content" class="text-slate-700 dark:text-slate-300 space-y-3 leading-relaxed text-sm sm:text-base">
+        <!-- Content -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-200 dark:border-slate-800 py-8 bg-white dark:bg-slate-900/40 text-slate-500 text-xs mt-10">
+    <div class="max-w-4xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p>© 2026 Nguyễn Thanh. Tên miền <span class="font-mono text-slate-700 dark:text-slate-300">nguyenthanhazt.tech</span>.</p>
+      
+      <div class="flex items-center gap-4">
+        <a href="https://repo.tinix.ai/vi" target="_blank" rel="noopener noreferrer" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors flex items-center gap-1">
+          <i class="fa-solid fa-arrow-trend-up"></i> TiniX Repo
+        </a>
+        <a href="https://github.com/trending" target="_blank" rel="noopener noreferrer" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors flex items-center gap-1">
+          <i class="fa-brands fa-github"></i> GitHub
+        </a>
+        <a href="https://aistudio.google.com" target="_blank" rel="noopener noreferrer" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors flex items-center gap-1">
+          <i class="fa-solid fa-cube"></i> Google AI Studio
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Dữ liệu bài viết đồng bộ từ TiniX Repo Trending -->
+  <script>
+    const posts = [
+      {
+        id: 1,
+        title: "morluto/rea: Reverse engineering mọi thứ bằng AI Agents từ hành vi app đến binary",
+        desc: "Dự án dẫn đầu bảng xếp hạng toàn cầu trên TiniX với hơn 401k lượt tương tác. Tận dụng multi-agents để dịch ngược, phân tích sâu hành vi ứng dụng và nhị phân gốc.",
+        content: `
+          <p>Dự án <strong>morluto/rea</strong> hiện đang đứng vị trí #1 trending toàn cầu trên hệ thống TiniX Repo Trending với mức tăng trưởng vượt bậc (+5.3k chỉ trong 24 giờ).</p>
+          <h4 class="font-bold text-slate-900 dark:text-white mt-3">Đặc điểm công nghệ:</h4>
+          <ul class="list-disc pl-5 space-y-1">
+            <li><strong>Ngôn ngữ chính:</strong> TypeScript & LLM Agent Frameworks.</li>
+            <li><strong>Tính năng:</strong> Tự động phân tích đảo ngược (Reverse Engineer) từ giao diện, luồng API đến mã máy nhị phân cục bộ.</li>
+            <li><strong>Ứng dụng:</strong> Tự động hóa kiểm thử bảo mật, tìm hiểu cấu trúc giao thức mà không cần đọc mã nguồn thủ công.</li>
+          </ul>
+        `,
+        category: "AI Agent",
+        stats: "401.3k Stars • +5.3k hôm nay",
+        repoUrl: "https://repo.tinix.ai/vi",
+        date: "Hôm nay"
+      },
+      {
+        id: 2,
+        title: "Nutlope/hallmark & pbakaus/impeccable: Chuẩn hóa ngôn ngữ thiết kế cho AI Coding Agents",
+        desc: "Loại bỏ hiện tượng 'AI-slop'. Bộ skill thiết kế dành riêng cho Claude Code, Cursor và Codex giúp AI tạo giao diện web chuẩn UX, vượt qua 57 bài kiểm tra tự động.",
+        content: `
+          <p>Một trong những vấn đề lớn nhất khi nhờ AI sinh mã HTML/CSS là giao diện thường mang phong cách lặp lại nhàm chán (AI-slop). Cả hai dự án <strong>Nutlope/hallmark</strong> và <strong>pbakaus/impeccable</strong> được cộng đồng mã nguồn mở đón nhận rất tích cực.</p>
+          <h4 class="font-bold text-slate-900 dark:text-white mt-3">Chi tiết:</h4>
+          <ul class="list-disc pl-5 space-y-1">
+            <li>Hỗ trợ 20 theme tùy chọn cùng 44 quy tắc kiểm tra thẩm mỹ tự động.</li>
+            <li>Tối ưu hóa token và tương thích trực tiếp với trình duyệt để lặp giao diện trong thời gian thực.</li>
+          </ul>
+        `,
+        category: "Tools",
+        stats: "40.3k Stars • Anti-Slop Design",
+        repoUrl: "https://repo.tinix.ai/vi",
+        date: "1 ngày trước"
+      },
+      {
+        id: 3,
+        title: "google/elephant-goldfish-model: Framework phát triển Spec-Driven với AI Agent",
+        desc: "Phương pháp phát triển theo đặc tả (Spec-Driven Development) của Google dùng Agent để stress-test các thiết kế phần mềm đối lập, bảo đảm tính toàn vẹn hệ thống.",
+        content: `
+          <p>Mô hình <strong>Elephant-Goldfish Model (EGM)</strong> áp dụng nguyên lý: Voi (Elephant - tính bền vững, ghi nhớ kiến trúc dài hạn) và Cá vàng (Goldfish - thử nghiệm nhanh, stress-test ngắn hạn các biên giới hạn lỗi).</p>
+          <p class="mt-2">Đây là framework mã nguồn mở được thiết kế tối ưu khi kết hợp cùng Gemini và môi trường phát triển Antigravity.</p>
+        `,
+        category: "AI Agent",
+        stats: "Google Open Source • Python",
+        repoUrl: "https://repo.tinix.ai/vi",
+        date: "1 ngày trước"
+      },
+      {
+        id: 4,
+        title: "debpalash/VoiceStudio: Giải pháp thay thế ElevenLabs mã nguồn mở chạy Offline hoàn toàn",
+        desc: "Công cụ Voice AI cục bộ hỗ trợ sao chép giọng nói (Voice Cloning), lồng tiếng video và chuyển văn bản thành giọng nói trên 646 ngôn ngữ mà không cần API key.",
+        content: `
+          <p>Được đánh giá là dự án âm thanh AI bùng nổ nhất tuần qua trên TiniX, <strong>VoiceStudio</strong> giải quyết bài toán quyền riêng tư và chi phí bản quyền giọng nói đắt đỏ.</p>
+          <p class="mt-2">Toàn bộ mô hình chạy trực tiếp trên GPU cục bộ, không gửi bất kỳ dữ liệu âm thanh nào lên đám mây.</p>
+        `,
+        category: "LLM",
+        stats: "92.6k Stars • 646 Ngôn ngữ",
+        repoUrl: "https://repo.tinix.ai/vi",
+        date: "2 ngày trước"
+      },
+      {
+        id: 5,
+        title: "interplains/Zero-Breach-Toolkit: Công cụ bảo mật mã nguồn mở phát hiện Spyware thương mại",
+        desc: "Bộ công cụ độc lập, không kết nối internet, quét tìm dấu vết các phần mềm gián điệp tinh vi như Pegasus, Graphite trên Windows, Android và iOS.",
+        content: `
+          <p>Một dự án mã nguồn mở thiết thực dành cho các nhà nghiên cứu bảo mật và người dùng muốn rà soát thiết bị cá nhân mà không sợ rò rỉ dữ liệu.</p>
+        `,
+        category: "Tools",
+        stats: "Zero-Network Security • Python",
+        repoUrl: "https://repo.tinix.ai/vi",
+        date: "2 ngày trước"
+      }
+    ];
+
+    let currentFilter = 'All';
+
+    // Render danh sách theo dạng 1 cột (Feed 1 column)
+    function renderPosts(list) {
+      const container = document.getElementById('posts-container');
+      if (!list.length) {
+        container.innerHTML = `
+          <div class="py-16 text-center text-slate-400 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800">
+            <i class="fa-regular fa-folder-open text-3xl mb-2"></i>
+            <p>Không tìm thấy bài viết phù hợp.</p>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = list.map(p => `
+        <article class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 hover:border-brand-500/50 hover:shadow-md transition-all group">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs mb-3">
+            <div class="flex items-center gap-2">
+              <span class="px-2.5 py-1 rounded-lg bg-brand-50 dark:bg-brand-950/60 text-brand-600 dark:text-brand-400 font-semibold">${p.category}</span>
+              <span class="text-slate-400 font-mono"><i class="fa-solid fa-fire text-amber-500 mr-1"></i>${p.stats}</span>
+            </div>
+            <span class="text-slate-400 text-[11px]">${p.date}</span>
+          </div>
+
+          <h3 class="text-lg sm:text-xl font-bold group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors leading-snug cursor-pointer mb-2" onclick="openModal(${p.id})">
+            ${p.title}
+          </h3>
+
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+            ${p.desc}
+          </p>
+
+          <div class="flex items-center justify-between pt-3 border-t border-slate-100 dark:border-slate-800/80 text-xs">
+            <button onclick="openModal(${p.id})" class="font-semibold text-brand-600 dark:text-brand-400 hover:underline flex items-center gap-1.5">
+              Đọc tóm tắt chi tiết <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </button>
+            <a href="${p.repoUrl}" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-slate-800 dark:hover:text-slate-200 flex items-center gap-1">
+              <i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i> Xem trên TiniX
+            </a>
+          </div>
+        </article>
+      `).join('');
+    }
+
+    function filterCategory(cat) {
+      currentFilter = cat;
+      document.querySelectorAll('.category-btn').forEach(btn => {
+        if (btn.dataset.cat === cat) {
+          btn.classList.add('bg-brand-600', 'text-white');
+          btn.classList.remove('bg-slate-100', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-300');
+        } else {
+          btn.classList.remove('bg-brand-600', 'text-white');
+          btn.classList.add('bg-slate-100', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-300');
+        }
+      });
+      searchPosts();
+    }
+
+    function searchPosts() {
+      const query = document.getElementById('search-input').value.toLowerCase().trim();
+      const filtered = posts.filter(p => {
+        const matchCat = currentFilter === 'All' || p.category === currentFilter;
+        const matchQuery = p.title.toLowerCase().includes(query) || p.desc.toLowerCase().includes(query);
+        return matchCat && matchQuery;
+      });
+      renderPosts(filtered);
+    }
+
+    function openModal(id) {
+      const post = posts.find(p => p.id === id);
+      if (!post) return;
+      document.getElementById('modal-category').innerText = post.category + " • " + post.stats;
+      document.getElementById('modal-title').innerText = post.title;
+      document.getElementById('modal-date').innerHTML = `<i class="fa-solid fa-clock mr-1"></i> ${post.date}`;
+      document.getElementById('modal-content').innerHTML = post.content + `
+        <div class="pt-4 mt-4 border-t border-slate-200 dark:border-slate-800 flex justify-end">
+          <a href="${post.repoUrl}" target="_blank" class="px-4 py-2 text-xs font-semibold rounded-xl bg-brand-600 text-white hover:bg-brand-700 transition-colors">
+            Khám phá trực tiếp trên TiniX
+          </a>
+        </div>
+      `;
+      document.getElementById('reading-modal').classList.remove('hidden');
+    }
+
+    function closeModal() {
+      document.getElementById('reading-modal').classList.add('hidden');
+    }
+
+    // Chuyển đổi Dark / Light mode
+    const themeBtn = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+    
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+      themeIcon.classList.replace('fa-moon', 'fa-sun');
+    }
+
+    themeBtn.addEventListener('click', () => {
+      if (document.documentElement.classList.contains('dark')) {
+        document.documentElement.classList.remove('dark');
+        localStorage.theme = 'light';
+        themeIcon.classList.replace('fa-sun', 'fa-moon');
+      } else {
+        document.documentElement.classList.add('dark');
+        localStorage.theme = 'dark';
+        themeIcon.classList.replace('fa-moon', 'fa-sun');
+      }
+    });
+
+    // Tải danh sách bài viết ban đầu
+    renderPosts(posts);
+  </script>
+</body>
+</html>
