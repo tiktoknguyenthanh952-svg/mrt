@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nguyễn Thanh | Tech Blog & Software Engineering</title>
-  <meta name="description" content="Blog cá nhân của Nguyễn Thanh - Chia sẻ về lập trình, AI, tự động hóa và kinh nghiệm công nghệ.">
+  <title>Nguyễn Thanh | Tech Blog & AI Engineering</title>
+  <meta name="description" content="Blog cá nhân của Nguyễn Thanh - Chia sẻ về GitHub Trending, Gemini AI, Google AI Studio và kỹ thuật phần mềm.">
   <meta name="author" content="Nguyễn Thanh">
 
   <!-- Tailwind CSS CDN -->
@@ -34,8 +34,9 @@
 
   <!-- Header / Navigation -->
   <header class="sticky top-0 z-40 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
-    <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-      <a href="#" class="flex items-center gap-3 group">
+    <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between gap-4">
+      <!-- Logo & Domain -->
+      <a href="#" class="flex items-center gap-3 group flex-shrink-0">
         <div class="w-10 h-10 rounded-xl bg-brand-600 text-white flex items-center justify-center font-bold text-lg shadow-md shadow-brand-500/20 group-hover:scale-105 transition-transform">
           NT
         </div>
@@ -45,36 +46,65 @@
         </div>
       </a>
 
-      <div class="flex items-center gap-3">
-        <!-- Nút đổi Dark / Light mode -->
+      <!-- Quick Links (GitHub Trending, Gemini, AI Studio) -->
+      <nav class="hidden md:flex items-center gap-1 bg-slate-100 dark:bg-slate-800/80 p-1 rounded-xl text-xs font-semibold">
+        <a href="https://github.com/trending" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg hover:bg-white dark:hover:bg-slate-700 hover:text-brand-600 dark:hover:text-brand-400 transition-all text-slate-600 dark:text-slate-300">
+          <i class="fa-brands fa-github text-sm"></i>
+          GitHub Trending
+        </a>
+        <a href="https://aistudio.google.com" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg hover:bg-white dark:hover:bg-slate-700 hover:text-brand-600 dark:hover:text-brand-400 transition-all text-slate-600 dark:text-slate-300">
+          <i class="fa-solid fa-cube text-sm text-amber-500"></i>
+          Google AI Studio
+        </a>
+        <a href="https://gemini.google.com" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg hover:bg-white dark:hover:bg-slate-700 hover:text-brand-600 dark:hover:text-brand-400 transition-all text-slate-600 dark:text-slate-300">
+          <i class="fa-solid fa-wand-magic-sparkles text-sm text-sky-500"></i>
+          Gemini AI
+        </a>
+      </nav>
+
+      <!-- Theme Toggle & CTA -->
+      <div class="flex items-center gap-2">
         <button id="theme-toggle" class="p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300 transition-colors" aria-label="Toggle Theme">
           <i id="theme-icon" class="fa-solid fa-moon text-sm"></i>
         </button>
 
-        <a href="#newsletter" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-xl bg-slate-900 text-white dark:bg-white dark:text-slate-900 hover:opacity-90 transition-opacity">
-          Đăng ký nhận tin
+        <a href="https://github.com/trending" target="_blank" rel="noopener noreferrer" class="inline-flex sm:hidden p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300">
+          <i class="fa-brands fa-github text-sm"></i>
         </a>
       </div>
     </div>
   </header>
 
   <!-- Hero Section -->
-  <section class="max-w-6xl mx-auto px-4 pt-12 pb-8 sm:pt-16 sm:pb-12 border-b border-slate-200 dark:border-slate-800">
+  <section class="max-w-6xl mx-auto px-4 pt-10 pb-8 sm:pt-14 sm:pb-10 border-b border-slate-200 dark:border-slate-800 w-full">
     <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
-      <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl bg-gradient-to-tr from-brand-600 to-indigo-400 text-white flex items-center justify-center text-4xl shadow-xl shadow-brand-500/20 flex-shrink-0">
-        <i class="fa-solid fa-laptop-code"></i>
+      <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl bg-gradient-to-tr from-brand-600 via-indigo-500 to-sky-400 text-white flex items-center justify-center text-4xl shadow-xl shadow-brand-500/20 flex-shrink-0">
+        <i class="fa-solid fa-brain"></i>
       </div>
-      <div class="text-center md:text-left space-y-3">
+      <div class="text-center md:text-left space-y-3 flex-grow">
         <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium bg-emerald-50 text-emerald-600 dark:bg-emerald-950/60 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800">
           <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-          Đang hoạt động & chia sẻ kiến thức
+          Đang theo dõi & nghiên cứu Open Source & Google AI
         </div>
         <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight">
-          Ghi chép công nghệ & hành trình lập trình
+          Hành trình Kỹ thuật Phần mềm & Trí tuệ Nhân tạo
         </h1>
         <p class="text-slate-600 dark:text-slate-400 max-w-2xl text-base sm:text-lg">
-          Xin chào, mình là <strong class="text-slate-900 dark:text-white">Nguyễn Thanh</strong>. Đây là nơi mình chia sẻ những bài học thực chiến về phát triển phần mềm, trí tuệ nhân tạo, tự động hóa quy trình và tối ưu hạ tầng.
+          Xin chào, mình là <strong class="text-slate-900 dark:text-white">Nguyễn Thanh</strong>. Blog này là nơi cập nhật các xu hướng mã nguồn mở hot nhất, kinh nghiệm phát triển với mô hình Gemini và kỹ thuật tối ưu hạ tầng Cloud.
         </p>
+
+        <!-- Quick Access Badges -->
+        <div class="flex flex-wrap items-center justify-center md:justify-start gap-2 pt-2">
+          <a href="https://github.com/trending" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg text-xs font-medium bg-slate-900 text-white dark:bg-slate-800 hover:bg-slate-700 transition-colors">
+            <i class="fa-brands fa-github"></i> Khám phá GitHub Trending
+          </a>
+          <a href="https://aistudio.google.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg text-xs font-medium bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-200 dark:border-amber-800 hover:bg-amber-500/20 transition-colors">
+            <i class="fa-solid fa-cube"></i> Google AI Studio
+          </a>
+          <a href="https://gemini.google.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg text-xs font-medium bg-sky-500/10 text-sky-600 dark:text-sky-400 border border-sky-200 dark:border-sky-800 hover:bg-sky-500/20 transition-colors">
+            <i class="fa-solid fa-wand-magic-sparkles"></i> Gemini AI
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -86,15 +116,15 @@
       <!-- Category Badges -->
       <div class="flex items-center gap-2 overflow-x-auto pb-2 sm:pb-0" id="category-filters">
         <button onclick="filterCategory('All')" class="category-btn active px-3.5 py-1.5 text-xs font-semibold rounded-lg bg-brand-600 text-white transition-colors" data-cat="All">Tất cả</button>
-        <button onclick="filterCategory('AI')" class="category-btn px-3.5 py-1.5 text-xs font-semibold rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors" data-cat="AI">Trí tuệ nhân tạo</button>
+        <button onclick="filterCategory('Gemini AI')" class="category-btn px-3.5 py-1.5 text-xs font-semibold rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors" data-cat="Gemini AI">Gemini & Google AI</button>
+        <button onclick="filterCategory('Open Source')" class="category-btn px-3.5 py-1.5 text-xs font-semibold rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors" data-cat="Open Source">GitHub Trending</button>
         <button onclick="filterCategory('DevOps')" class="category-btn px-3.5 py-1.5 text-xs font-semibold rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors" data-cat="DevOps">Tên miền & Cloud</button>
-        <button onclick="filterCategory('Frontend')" class="category-btn px-3.5 py-1.5 text-xs font-semibold rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors" data-cat="Frontend">Frontend</button>
       </div>
 
       <!-- Search Input -->
       <div class="relative w-full sm:w-72">
         <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-xs text-slate-400"></i>
-        <input type="text" id="search-input" oninput="searchPosts()" placeholder="Tìm kiếm bài viết..." class="w-full pl-9 pr-4 py-2 text-sm rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-brand-500">
+        <input type="text" id="search-input" oninput="searchPosts()" placeholder="Tìm kiếm bài viết, công nghệ..." class="w-full pl-9 pr-4 py-2 text-sm rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-brand-500">
       </div>
     </div>
 
@@ -115,7 +145,7 @@
       <h2 id="modal-title" class="text-2xl font-bold text-slate-900 dark:text-white leading-tight">Title</h2>
       <div class="flex items-center gap-4 text-xs text-slate-400 border-b border-slate-100 dark:border-slate-800 pb-3">
         <span id="modal-author"><i class="fa-solid fa-user-pen mr-1"></i> Nguyễn Thanh</span>
-        <span id="modal-date"><i class="fa-solid fa-calendar mr-1"></i> Hôm nay</span>
+        <span id="modal-date"><i class="fa-solid fa-calendar mr-1"></i> Ngày đăng</span>
       </div>
 
       <div id="modal-content" class="text-slate-700 dark:text-slate-300 space-y-4 leading-relaxed text-sm sm:text-base">
@@ -124,21 +154,23 @@
     </div>
   </div>
 
-  <!-- Newsletter Section -->
-  <section id="newsletter" class="bg-slate-100 dark:bg-slate-900/50 border-t border-slate-200 dark:border-slate-800 py-12">
-    <div class="max-w-xl mx-auto px-4 text-center space-y-4">
-      <h3 class="text-xl font-bold">Cập nhật những bài viết mới nhất</h3>
-      <p class="text-sm text-slate-600 dark:text-slate-400">Không spam. Chỉ gửi những chia sẻ kỹ thuật chất lượng cao.</p>
-      <form onsubmit="handleSubscribe(event)" class="flex gap-2 max-w-md mx-auto">
-        <input type="email" required placeholder="Nhập địa chỉ email của bạn..." class="flex-grow px-4 py-2.5 text-sm rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 focus:outline-none focus:ring-2 focus:ring-brand-500">
-        <button type="submit" class="px-5 py-2.5 text-sm font-semibold text-white bg-brand-600 rounded-xl hover:bg-brand-700 transition-colors">Đăng ký</button>
-      </form>
-    </div>
-  </section>
-
   <!-- Footer -->
-  <footer class="border-t border-slate-200 dark:border-slate-800 py-6 text-center text-xs text-slate-500">
-    <p>© 2026 Nguyễn Thanh. Thiết kế & phát triển trên tên miền <span class="font-mono text-slate-700 dark:text-slate-300">nguyenthanhazt.tech</span>.</p>
+  <footer class="border-t border-slate-200 dark:border-slate-800 py-8 bg-white dark:bg-slate-900/50 text-slate-500 text-xs">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p>© 2026 Nguyễn Thanh. Thiết kế & phát triển trên tên miền <span class="font-mono text-slate-700 dark:text-slate-300">nguyenthanhazt.tech</span>.</p>
+      
+      <div class="flex items-center gap-4">
+        <a href="https://github.com/trending" target="_blank" rel="noopener noreferrer" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors flex items-center gap-1">
+          <i class="fa-brands fa-github"></i> GitHub Trending
+        </a>
+        <a href="https://aistudio.google.com" target="_blank" rel="noopener noreferrer" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors flex items-center gap-1">
+          <i class="fa-solid fa-cube"></i> Google AI Studio
+        </a>
+        <a href="https://gemini.google.com" target="_blank" rel="noopener noreferrer" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors flex items-center gap-1">
+          <i class="fa-solid fa-wand-magic-sparkles"></i> Gemini
+        </a>
+      </div>
+    </div>
   </footer>
 
   <!-- Script xử lý dữ liệu & tương tác -->
@@ -147,42 +179,56 @@
     const posts = [
       {
         id: 1,
-        title: "Cách trỏ tên miền về GitHub Pages chỉ trong 5 phút",
-        desc: "Hướng dẫn cấu hình bản ghi A và CNAME trên Namify để kích hoạt website chạy trên GitHub Pages với chứng chỉ SSL miễn phí.",
+        title: "Tận dụng Google AI Studio để thử nghiệm Prompt và xây dựng AI Agent",
+        desc: "Google AI Studio là công cụ trực quan mạnh mẽ nhất giúp kỹ sư phần mềm tạo nguyên mẫu nhanh, kiểm thử System Instructions và lấy API Key cho Gemini.",
         content: `
-          <p>Khi mới mua tên miền từ các nhà cung cấp như Namify, việc liên kết tên miền về hosting miễn phí của GitHub thường khiến nhiều người bỡ ngỡ do khái niệm DNS.</p>
-          <h4 class="font-bold text-slate-900 dark:text-white mt-4">Các bước cốt lõi:</h4>
-          <ol class="list-decimal pl-5 space-y-1">
-            <li>Thêm 4 bản ghi A của GitHub (185.199.108.153 đến 111.153).</li>
-            <li>Đặt giá trị TTL về Auto hoặc 3600 giây.</li>
-            <li>Thêm bản ghi CNAME cho subdomain www trỏ về repository github.io.</li>
-          </ol>
-          <p class="mt-4">Sau khi thiết lập, hệ thống DNS sẽ tự động phân giải và kích hoạt ổ khóa bảo mật HTTPS cho tên miền của bạn.</p>
+          <p><a href="https://aistudio.google.com" target="_blank" class="text-brand-600 font-semibold underline">Google AI Studio</a> là môi trường làm việc lý tưởng trên nền web để thử nghiệm các tính năng của dòng mô hình Gemini trước khi đưa vào mã nguồn ứng dụng.</p>
+          <h4 class="font-bold text-slate-900 dark:text-white mt-4">Điểm nổi bật:</h4>
+          <ul class="list-disc pl-5 space-y-1">
+            <li>Thử nghiệm trực quan các chế độ: Chat Prompt, Freeform Prompt và Structured Prompt.</li>
+            <li>Điều chỉnh trực tiếp tham số nhiệt độ (Temperature), Top-P, Safety Settings.</li>
+            <li>Bấm <strong>Get code</strong> để xuất đoạn mã sang Python, JavaScript (Node.js/Web), cURL hoặc Kotlin chỉ trong một cú nhấp.</li>
+          </ul>
         `,
-        category: "DevOps",
+        category: "Gemini AI",
         date: "30/10/2026"
       },
       {
         id: 2,
-        title: "Tích hợp AI và LLM vào ứng dụng phần mềm thực chiến",
-        desc: "Khám phá cách tận dụng các mô hình ngôn ngữ lớn để tự động hóa quy trình phát triển và cải thiện trải nghiệm người dùng.",
+        title: "Theo dõi GitHub Trending: Cách tìm kiếm ý tưởng và dự án mã nguồn mở bứt phá",
+        desc: "Bí quyết lọc các kho lưu trữ tiềm năng trên GitHub Trending theo ngôn ngữ và thời gian để nắm bắt các làn sóng công nghệ mới nhất.",
         content: `
-          <p>Trí tuệ nhân tạo không chỉ dừng lại ở các cuộc hội thoại mà đang trở thành thành phần cốt lõi trong quy trình kỹ thuật phần mềm hiện đại.</p>
-          <p class="mt-2">Bằng cách tích hợp các API tạo sinh và agentic IDE, chúng ta có thể tăng tốc từ khâu viết tài liệu, tạo nguyên mẫu giao diện đến kiểm thử tự động một cách vượt bậc.</p>
+          <p><a href="https://github.com/trending" target="_blank" class="text-brand-600 font-semibold underline">GitHub Trending</a> là nơi thể hiện rõ nhất nhịp đập của cộng đồng lập trình toàn cầu.</p>
+          <p class="mt-2">Bằng việc theo dõi tab Trending hàng ngày hoặc hàng tuần theo từng ngôn ngữ (Python, TypeScript, Rust), bạn sẽ sớm phát hiện các thư viện AI mới nổi, các bộ công cụ tự động hóa và các framework giải quyết bài toán thực tế hiệu quả.</p>
         `,
-        category: "AI",
-        date: "28/10/2026"
+        category: "Open Source",
+        date: "29/10/2026"
       },
       {
         id: 3,
-        title: "Xây dựng giao diện web hiện đại với Tailwind CSS",
-        desc: "Tại sao Tailwind CSS giúp tối ưu hóa tốc độ lập trình giao diện và duy trì tính nhất quán cho các dự án cá nhân.",
+        title: "Tích hợp Gemini AI vào ứng dụng web với JavaScript thuần",
+        desc: "Hướng dẫn gọi Gemini API trực tiếp từ ứng dụng web phía client để tạo tính năng tóm tắt văn bản và trả lời tự động.",
         content: `
-          <p>Tailwind CSS loại bỏ gánh nặng đặt tên class phức tạp và giúp bạn xây dựng giao diện tùy biến nhanh chóng mà không cần rời khỏi file mã nguồn HTML.</p>
-          <p class="mt-2">Kết hợp cùng chế độ Dark Mode dựa trên class và hệ màu sắc rõ ràng, bạn có thể tạo ra sản phẩm hoàn chỉnh trong thời gian ngắn nhất.</p>
+          <p>Với API của Gemini, bạn có thể dễ dàng bổ sung năng lực hiểu ngôn ngữ tự nhiên và phân tích dữ liệu đa phương tiện vào bất kỳ trang web tĩnh nào.</p>
+          <p class="mt-2">Chỉ cần lấy API key từ Google AI Studio, bạn đã có thể kết nối SDK <code>@google/genai</code> để kích hoạt khả năng suy luận mạnh mẽ ngay trên giao diện người dùng.</p>
         `,
-        category: "Frontend",
-        date: "25/10/2026"
+        category: "Gemini AI",
+        date: "28/10/2026"
+      },
+      {
+        id: 4,
+        title: "Cách trỏ tên miền nguyenthanhazt.tech về GitHub Pages thành công",
+        desc: "Quy trình thiết lập 4 bản ghi A và CNAME trên Namify để kích hoạt chứng chỉ SSL và đưa blog cá nhân lên môi trường toàn cầu.",
+        content: `
+          <p>Trang web này hiện đang được vận hành trực tiếp trên hạ tầng GitHub Pages kết hợp cùng tên miền tùy chỉnh <code>nguyenthanhazt.tech</code> được đăng ký từ Namify.</p>
+          <h4 class="font-bold text-slate-900 dark:text-white mt-4">Các thông số bản ghi chuẩn:</h4>
+          <ul class="list-disc pl-5 space-y-1">
+            <li>Bản ghi A: <code>185.199.108.153</code>, <code>185.199.109.153</code>, <code>185.199.110.153</code>, <code>185.199.111.153</code>.</li>
+            <li>Bản ghi CNAME: Host <code>www</code> trỏ về tên miền github.io của bạn.</li>
+          </ul>
+        `,
+        category: "DevOps",
+        date: "27/10/2026"
       }
     ];
 
@@ -283,13 +329,7 @@
       }
     });
 
-    function handleSubscribe(e) {
-      e.preventDefault();
-      alert("Cảm ơn bạn! Thông báo xác nhận sẽ được gửi tới hòm thư.");
-      e.target.reset();
-    }
-
-    // Khởi chạy ban đầu
+    // Khởi chạy hiển thị
     renderPosts(posts);
   </script>
 </body>
