@@ -3,885 +3,294 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nguyễn Thành Tech Blog | nguyenthanhazt.tech</title>
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <title>Nguyễn Thanh | Tech Blog & Software Engineering</title>
+  <meta name="description" content="Blog cá nhân của Nguyễn Thanh - Chia sẻ về lập trình, AI, tự động hóa và kinh nghiệm công nghệ.">
+  <meta name="author" content="Nguyễn Thanh">
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
   <script>
     tailwind.config = {
       darkMode: 'class',
       theme: {
         extend: {
-          fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-            mono: ['"JetBrains Mono"', 'monospace'],
-          },
           colors: {
             brand: {
               50: '#eef2ff',
-              100: '#e0e7ff',
               500: '#6366f1',
               600: '#4f46e5',
               700: '#4338ca',
-              cyan: '#06b6d4',
             }
           }
         }
       }
     }
   </script>
-
-  <style>
-    /* Custom scrollbar */
-    ::-webkit-scrollbar {
-      width: 8px;
-    }
-    ::-webkit-scrollbar-track {
-      background: rgba(100, 116, 139, 0.1);
-    }
-    ::-webkit-scrollbar-thumb {
-      background: rgba(100, 116, 139, 0.3);
-      border-radius: 9999px;
-    }
-    ::-webkit-scrollbar-thumb:hover {
-      background: rgba(99, 102, 241, 0.6);
-    }
-    .gradient-brand {
-      background: linear-gradient(135deg, #4f46e5 0%, #06b6d4 100%);
-    }
-    .text-gradient {
-      background: linear-gradient(135deg, #4f46e5 0%, #06b6d4 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    .dark .text-gradient {
-      background: linear-gradient(135deg, #818cf8 0%, #38bdf8 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    .glassmorphism {
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-    }
-  </style>
 </head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 min-h-screen flex flex-col font-sans transition-colors duration-200">
 
-<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 font-sans min-h-screen flex flex-col transition-colors duration-300 selection:bg-brand-500 selection:text-white">
-
-  <!-- ================= HEADER & NAVIGATION ================= -->
-  <header class="sticky top-0 z-40 w-full bg-white/85 dark:bg-slate-900/85 border-b border-slate-200/80 dark:border-slate-800 glassmorphism transition-colors duration-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
-      
-      <!-- Logo -->
-      <a href="#" class="flex items-center gap-2 group flex-shrink-0">
-        <div class="w-10 h-10 rounded-xl gradient-brand flex items-center justify-center text-white shadow-md shadow-brand-500/25 group-hover:scale-105 transition-transform duration-300">
-          <i class="fa-solid fa-code font-bold text-sm"></i>
+  <!-- Header / Navigation -->
+  <header class="sticky top-0 z-40 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-xl bg-brand-600 text-white flex items-center justify-center font-bold text-lg shadow-md shadow-brand-500/20 group-hover:scale-105 transition-transform">
+          NT
         </div>
-        <div class="flex flex-col">
-          <div class="flex items-center gap-1">
-            <span class="font-bold text-lg tracking-tight text-slate-900 dark:text-white">nguyenthanhazt</span>
-            <span class="font-mono text-[11px] font-semibold px-1.5 py-0.5 rounded bg-brand-50 dark:bg-brand-900/60 text-brand-600 dark:text-cyan-400 border border-brand-200 dark:border-brand-800">.tech</span>
-          </div>
-          <span class="text-[10px] text-slate-400 font-medium">Software & Tech Log</span>
+        <div>
+          <span class="font-bold text-lg tracking-tight block">Nguyễn Thanh</span>
+          <span class="text-xs text-brand-600 dark:text-brand-400 font-mono">nguyenthanhazt.tech</span>
         </div>
       </a>
 
-      <!-- Desktop Navigation Links -->
-      <nav class="hidden md:flex items-center gap-1 lg:gap-2 text-sm font-medium">
-        <a href="#featured" class="px-3 py-2 rounded-lg text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-cyan-400 hover:bg-slate-100 dark:hover:bg-slate-800/60 transition">Tiêu điểm</a>
-        <a href="#blog-feed" class="px-3 py-2 rounded-lg text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-cyan-400 hover:bg-slate-100 dark:hover:bg-slate-800/60 transition">Bài viết</a>
-        <a href="#author-section" class="px-3 py-2 rounded-lg text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-cyan-400 hover:bg-slate-100 dark:hover:bg-slate-800/60 transition">Về tác giả</a>
-        <a href="#newsletter-section" class="px-3 py-2 rounded-lg text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-cyan-400 hover:bg-slate-100 dark:hover:bg-slate-800/60 transition">Bản tin</a>
-      </nav>
-
-      <!-- Search Bar & Dark Mode Switcher -->
-      <div class="flex items-center gap-2 sm:gap-3 flex-shrink-0">
-        
-        <!-- Live Search Input -->
-        <div class="relative hidden sm:block w-44 lg:w-60">
-          <input 
-            type="text" 
-            id="searchInput" 
-            placeholder="Tìm kiếm bài viết..." 
-            class="w-full pl-9 pr-4 py-1.5 text-xs bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 rounded-xl border border-transparent focus:border-brand-500 focus:bg-white dark:focus:bg-slate-900 focus:outline-none transition-all placeholder:text-slate-400"
-          >
-          <i class="fa-solid fa-magnifying-glass absolute left-3 top-2.5 text-slate-400 text-xs"></i>
-        </div>
-
-        <!-- Dark/Light Mode Button -->
-        <button 
-          id="themeToggleBtn" 
-          aria-label="Chuyển chế độ sáng/tối" 
-          class="w-9 h-9 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-amber-400 flex items-center justify-center transition-all"
-        >
-          <i id="themeIcon" class="fa-solid fa-moon text-sm"></i>
+      <div class="flex items-center gap-3">
+        <!-- Nút đổi Dark / Light mode -->
+        <button id="theme-toggle" class="p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300 transition-colors" aria-label="Toggle Theme">
+          <i id="theme-icon" class="fa-solid fa-moon text-sm"></i>
         </button>
 
-        <!-- Social Quick Link -->
-        <a 
-          href="https://github.com" 
-          target="_blank" 
-          rel="noreferrer" 
-          class="hidden sm:flex w-9 h-9 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 items-center justify-center transition-all"
-          title="GitHub Nguyễn Thành"
-        >
-          <i class="fa-brands fa-github text-sm"></i>
+        <a href="#newsletter" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-xl bg-slate-900 text-white dark:bg-white dark:text-slate-900 hover:opacity-90 transition-opacity">
+          Đăng ký nhận tin
         </a>
-
-        <!-- Mobile Menu Toggle -->
-        <button id="mobileMenuBtn" class="md:hidden w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-700 dark:text-slate-300">
-          <i class="fa-solid fa-bars text-sm"></i>
-        </button>
       </div>
-
-    </div>
-
-    <!-- Mobile Drawer Menu -->
-    <div id="mobileMenu" class="hidden md:hidden border-t border-slate-200 dark:border-slate-800 px-4 py-3 space-y-2 bg-white dark:bg-slate-900">
-      <div class="mb-3">
-        <input 
-          type="text" 
-          id="mobileSearchInput" 
-          placeholder="Tìm kiếm bài viết..." 
-          class="w-full pl-9 pr-4 py-2 text-xs bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 rounded-xl border border-transparent focus:border-brand-500 focus:outline-none"
-        >
-      </div>
-      <a href="#featured" class="block px-3 py-2 text-sm font-medium rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800">Tiêu điểm</a>
-      <a href="#blog-feed" class="block px-3 py-2 text-sm font-medium rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800">Tất cả bài viết</a>
-      <a href="#author-section" class="block px-3 py-2 text-sm font-medium rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800">Về tác giả</a>
-      <a href="#newsletter-section" class="block px-3 py-2 text-sm font-medium rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800">Nhận bản tin</a>
     </div>
   </header>
 
-  <!-- ================= HERO INTRO SECTION ================= -->
-  <section class="relative overflow-hidden pt-12 pb-14 border-b border-slate-200/70 dark:border-slate-800/80 bg-gradient-to-b from-white via-slate-50 to-slate-100 dark:from-slate-900 dark:via-slate-950 dark:to-slate-950">
-    <div class="absolute -top-24 left-1/2 -translate-x-1/2 w-96 h-96 bg-brand-500/10 dark:bg-brand-500/15 rounded-full blur-3xl pointer-events-none"></div>
-
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center sm:text-left">
-      <div class="flex flex-col lg:flex-row items-center justify-between gap-8">
-        
-        <div class="max-w-2xl space-y-4">
-          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-50 dark:bg-brand-950/60 border border-brand-200 dark:border-brand-900 text-brand-600 dark:text-cyan-400 text-xs font-mono font-medium">
-            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-            Tech, Code, Cloud & Insights • by Nguyễn Thành
-          </div>
-          
-          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-tight">
-            Khám phá kiến trúc phần mềm, <span class="text-gradient">AI và Hệ thống Hiện đại</span>
-          </h1>
-
-          <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400 leading-relaxed">
-            Không gian chia sẻ kinh nghiệm thực chiến về xây dựng ứng dụng quy mô lớn, DevOps, trí tuệ nhân tạo và những suy ngẫm trong hành trình làm chủ công nghệ tại <span class="font-mono font-semibold text-brand-600 dark:text-cyan-400">nguyenthanhazt.tech</span>.
-          </p>
-
-          <div class="pt-2 flex flex-wrap items-center justify-center sm:justify-start gap-4">
-            <a href="#blog-feed" class="px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold text-white gradient-brand hover:opacity-95 shadow-md shadow-brand-500/25 transition">
-              Đọc bài mới nhất <i class="fa-solid fa-arrow-down ml-1.5 text-xs"></i>
-            </a>
-            <a href="#author-section" class="px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700/60 transition">
-              Tìm hiểu tác giả
-            </a>
-          </div>
+  <!-- Hero Section -->
+  <section class="max-w-6xl mx-auto px-4 pt-12 pb-8 sm:pt-16 sm:pb-12 border-b border-slate-200 dark:border-slate-800">
+    <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
+      <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl bg-gradient-to-tr from-brand-600 to-indigo-400 text-white flex items-center justify-center text-4xl shadow-xl shadow-brand-500/20 flex-shrink-0">
+        <i class="fa-solid fa-laptop-code"></i>
+      </div>
+      <div class="text-center md:text-left space-y-3">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium bg-emerald-50 text-emerald-600 dark:bg-emerald-950/60 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          Đang hoạt động & chia sẻ kiến thức
         </div>
-
-        <!-- Quick Stats Badge Board -->
-        <div class="grid grid-cols-3 gap-3 sm:gap-4 w-full sm:w-auto p-4 sm:p-5 rounded-3xl bg-white/70 dark:bg-slate-900/70 border border-slate-200 dark:border-slate-800 glassmorphism shadow-sm">
-          <div class="text-center px-3 py-2">
-            <p class="font-mono text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white" id="statArticles">32+</p>
-            <p class="text-[11px] text-slate-500 font-medium mt-0.5">Bài viết</p>
-          </div>
-          <div class="text-center px-3 py-2 border-x border-slate-200 dark:border-slate-800">
-            <p class="font-mono text-2xl sm:text-3xl font-extrabold text-brand-600 dark:text-cyan-400">45k</p>
-            <p class="text-[11px] text-slate-500 font-medium mt-0.5">Lượt đọc</p>
-          </div>
-          <div class="text-center px-3 py-2">
-            <p class="font-mono text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">5</p>
-            <p class="text-[11px] text-slate-500 font-medium mt-0.5">Chuyên mục</p>
-          </div>
-        </div>
-
+        <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight">
+          Ghi chép công nghệ & hành trình lập trình
+        </h1>
+        <p class="text-slate-600 dark:text-slate-400 max-w-2xl text-base sm:text-lg">
+          Xin chào, mình là <strong class="text-slate-900 dark:text-white">Nguyễn Thanh</strong>. Đây là nơi mình chia sẻ những bài học thực chiến về phát triển phần mềm, trí tuệ nhân tạo, tự động hóa quy trình và tối ưu hạ tầng.
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- ================= FEATURED POST (TIÊU ĐIỂM) ================= -->
-  <section id="featured" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 w-full">
-    <div class="flex items-center justify-between mb-6">
-      <div class="flex items-center gap-2">
-        <i class="fa-solid fa-bolt text-amber-500 text-base"></i>
-        <h2 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">Bài Viết Tiêu Điểm</h2>
+  <!-- Main Content & Posts List -->
+  <main class="max-w-6xl mx-auto px-4 py-10 flex-grow w-full space-y-8">
+    <!-- Filter & Search Bar -->
+    <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4">
+      <!-- Category Badges -->
+      <div class="flex items-center gap-2 overflow-x-auto pb-2 sm:pb-0" id="category-filters">
+        <button onclick="filterCategory('All')" class="category-btn active px-3.5 py-1.5 text-xs font-semibold rounded-lg bg-brand-600 text-white transition-colors" data-cat="All">Tất cả</button>
+        <button onclick="filterCategory('AI')" class="category-btn px-3.5 py-1.5 text-xs font-semibold rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors" data-cat="AI">Trí tuệ nhân tạo</button>
+        <button onclick="filterCategory('DevOps')" class="category-btn px-3.5 py-1.5 text-xs font-semibold rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors" data-cat="DevOps">Tên miền & Cloud</button>
+        <button onclick="filterCategory('Frontend')" class="category-btn px-3.5 py-1.5 text-xs font-semibold rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors" data-cat="Frontend">Frontend</button>
       </div>
-      <span class="text-xs font-mono text-slate-400">Editor's Pick</span>
-    </div>
 
-    <div class="group relative bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm hover:shadow-xl hover:border-brand-500/40 dark:hover:border-brand-500/40 transition-all duration-300">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-0">
-        
-        <!-- Image Cover -->
-        <div class="lg:col-span-7 relative h-64 sm:h-80 lg:h-auto overflow-hidden bg-slate-800">
-          <img 
-            src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80" 
-            alt="AI Architecture" 
-            class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
-            loading="lazy"
-          >
-          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent lg:hidden"></div>
-          <span class="absolute top-4 left-4 px-3 py-1 rounded-full text-[11px] font-semibold bg-white/90 dark:bg-slate-900/90 text-brand-600 dark:text-cyan-400 glassmorphism shadow">
-            Trí tuệ nhân tạo (AI)
-          </span>
-        </div>
-
-        <!-- Content -->
-        <div class="lg:col-span-5 p-6 sm:p-8 flex flex-col justify-between">
-          <div class="space-y-3">
-            <div class="flex items-center gap-3 text-xs text-slate-400 font-mono">
-              <span><i class="fa-regular fa-calendar mr-1"></i> 26 Tháng 10, 2026</span>
-              <span>•</span>
-              <span><i class="fa-regular fa-clock mr-1"></i> 8 phút đọc</span>
-            </div>
-
-            <h3 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-cyan-400 transition-colors">
-              Xây dựng Hệ Thống RAG (Retrieval-Augmented Generation) Tối Ưu Với Vector Database Năm 2026
-            </h3>
-
-            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 line-clamp-3 leading-relaxed">
-              Tìm hiểu cách tích hợp các mô hình ngôn ngữ lớn (LLM) với cơ sở dữ liệu véc-tơ để giảm hallucination, tăng tính chính xác của tài liệu nội bộ và tối ưu chi phí hạ tầng cloud...
-            </p>
-          </div>
-
-          <div class="pt-6 mt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
-            <div class="flex items-center gap-2.5">
-              <div class="w-8 h-8 rounded-full gradient-brand text-white flex items-center justify-center text-xs font-bold shadow">
-                NT
-              </div>
-              <div>
-                <p class="text-xs font-semibold text-slate-900 dark:text-white">Nguyễn Thành</p>
-                <p class="text-[10px] text-slate-400">Founder & Author</p>
-              </div>
-            </div>
-
-            <button 
-              onclick="openPostModal(0)" 
-              class="px-4 py-2 rounded-xl text-xs font-semibold text-brand-600 dark:text-cyan-400 bg-brand-50 dark:bg-brand-950/70 hover:bg-brand-100 dark:hover:bg-brand-900/80 transition flex items-center gap-1.5"
-            >
-              Đọc bài <i class="fa-solid fa-arrow-right text-[10px]"></i>
-            </button>
-          </div>
-
-        </div>
-
+      <!-- Search Input -->
+      <div class="relative w-full sm:w-72">
+        <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-xs text-slate-400"></i>
+        <input type="text" id="search-input" oninput="searchPosts()" placeholder="Tìm kiếm bài viết..." class="w-full pl-9 pr-4 py-2 text-sm rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-brand-500">
       </div>
     </div>
-  </section>
 
-  <!-- ================= MAIN CONTENT FEED + SIDEBAR ================= -->
-  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 w-full flex-1">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
-      
-      <!-- Left Column: Blog Feed (8 cols) -->
-      <div class="lg:col-span-8" id="blog-feed">
-        
-        <!-- Category Filter Tabs -->
-        <div class="flex items-center justify-between gap-4 mb-6 pb-2 overflow-x-auto no-scrollbar">
-          <div class="flex items-center gap-1.5 sm:gap-2 flex-nowrap" id="categoryFilterContainer">
-            <button onclick="filterCategory('all', this)" class="category-btn active px-3.5 py-1.5 rounded-full text-xs font-semibold bg-brand-600 text-white shadow-sm transition whitespace-nowrap">
-              Tất cả
-            </button>
-            <button onclick="filterCategory('ai', this)" class="category-btn px-3.5 py-1.5 rounded-full text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition whitespace-nowrap">
-              AI & Automation
-            </button>
-            <button onclick="filterCategory('web', this)" class="category-btn px-3.5 py-1.5 rounded-full text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition whitespace-nowrap">
-              Web & Frontend
-            </button>
-            <button onclick="filterCategory('devops', this)" class="category-btn px-3.5 py-1.5 rounded-full text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition whitespace-nowrap">
-              DevOps & Cloud
-            </button>
-            <button onclick="filterCategory('tips', this)" class="category-btn px-3.5 py-1.5 rounded-full text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition whitespace-nowrap">
-              Tips & Tutorials
-            </button>
-          </div>
-        </div>
-
-        <!-- Article Cards List -->
-        <div id="articlesList" class="space-y-5">
-          <!-- Rendered dynamically by JavaScript -->
-        </div>
-
-        <!-- Empty State (hidden by default) -->
-        <div id="emptySearchNotice" class="hidden py-16 text-center bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800">
-          <div class="w-14 h-14 mx-auto rounded-2xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-400 text-xl mb-3">
-            <i class="fa-solid fa-file-circle-question"></i>
-          </div>
-          <p class="text-sm font-semibold text-slate-800 dark:text-slate-200">Không tìm thấy bài viết nào phù hợp</p>
-          <p class="text-xs text-slate-400 mt-1">Hãy thử tìm kiếm với từ khóa khác hoặc chuyển chuyên mục.</p>
-        </div>
-
-      </div>
-
-      <!-- Right Column: Sidebar (4 cols) -->
-      <aside class="lg:col-span-4 space-y-6">
-        
-        <!-- Author Profile Card -->
-        <div id="author-section" class="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm">
-          <div class="flex items-center gap-4">
-            <div class="relative">
-              <div class="w-16 h-16 rounded-2xl gradient-brand p-0.5 shadow-md shadow-brand-500/20">
-                <img 
-                  src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80" 
-                  alt="Nguyễn Thành" 
-                  class="w-full h-full object-cover rounded-[14px]"
-                  loading="lazy"
-                >
-              </div>
-              <span class="absolute bottom-0 right-0 w-4 h-4 rounded-full bg-emerald-500 border-2 border-white dark:border-slate-900" title="Online"></span>
-            </div>
-            <div>
-              <h3 class="font-bold text-base text-slate-900 dark:text-white">Nguyễn Thành</h3>
-              <p class="text-xs text-brand-600 dark:text-cyan-400 font-mono font-medium">Software Engineer & Tech Blogger</p>
-              <p class="text-[11px] text-slate-400 mt-0.5">Việt Nam • nguyenthanhazt.tech</p>
-            </div>
-          </div>
-
-          <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mt-4">
-            Đam mê kiến trúc Cloud Native, phát triển hệ thống phân tán và ứng dụng AI vào tự động hoá quy trình. Luôn tin rằng viết blog là cách tốt nhất để củng cố và lan tỏa tri thức.
-          </p>
-
-          <div class="pt-4 mt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
-            <span class="text-xs font-semibold text-slate-500">Kết nối:</span>
-            <div class="flex items-center gap-2">
-              <a href="https://github.com" target="_blank" class="w-8 h-8 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-cyan-400 flex items-center justify-center transition" title="GitHub">
-                <i class="fa-brands fa-github text-xs"></i>
-              </a>
-              <a href="https://linkedin.com" target="_blank" class="w-8 h-8 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-cyan-400 flex items-center justify-center transition" title="LinkedIn">
-                <i class="fa-brands fa-linkedin text-xs"></i>
-              </a>
-              <button onclick="showToast('Liên hệ: contact@nguyenthanhazt.tech', 'info')" class="w-8 h-8 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-cyan-400 flex items-center justify-center transition" title="Email">
-                <i class="fa-regular fa-envelope text-xs"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Popular Tags Widget -->
-        <div class="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm">
-          <div class="flex items-center gap-2 mb-4">
-            <i class="fa-solid fa-tags text-brand-500 text-sm"></i>
-            <h3 class="font-bold text-sm text-slate-900 dark:text-white">Chủ Đề Thịnh Hành</h3>
-          </div>
-          <div class="flex flex-wrap gap-1.5 font-mono text-xs">
-            <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-brand-600 cursor-pointer">#Kubernetes</span>
-            <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-brand-600 cursor-pointer">#LangChain</span>
-            <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-brand-600 cursor-pointer">#NextJS</span>
-            <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-brand-600 cursor-pointer">#TailwindCSS</span>
-            <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-brand-600 cursor-pointer">#Docker</span>
-            <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-brand-600 cursor-pointer">#Rust</span>
-            <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-brand-600 cursor-pointer">#CI_CD</span>
-          </div>
-        </div>
-
-        <!-- Newsletter Subscription Widget -->
-        <div id="newsletter-section" class="bg-gradient-to-br from-indigo-900 via-slate-900 to-slate-950 text-white rounded-3xl p-6 shadow-lg border border-indigo-800/40 relative overflow-hidden">
-          <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-brand-500/20 rounded-full blur-2xl pointer-events-none"></div>
-
-          <div class="w-10 h-10 rounded-xl bg-white/10 glassmorphism flex items-center justify-center text-cyan-400 mb-4">
-            <i class="fa-regular fa-paper-plane text-sm"></i>
-          </div>
-
-          <h3 class="font-bold text-base text-white">Nhận Bài Viết Mới</h3>
-          <p class="text-xs text-slate-300 mt-1 leading-relaxed">
-            Đăng ký nhận thông báo mỗi tuần khi có bài viết công nghệ, source code và kinh nghiệm mới. Không spam.
-          </p>
-
-          <form id="newsletterForm" class="mt-4 space-y-2.5">
-            <input 
-              type="email" 
-              id="newsletterEmail" 
-              required 
-              placeholder="nhap-email-cua-ban@gmail.com" 
-              class="w-full px-3.5 py-2.5 text-xs bg-white/10 rounded-xl border border-white/20 text-white placeholder:text-slate-400 focus:outline-none focus:border-cyan-400"
-            >
-            <button 
-              type="submit" 
-              class="w-full py-2.5 rounded-xl text-xs font-semibold text-slate-950 bg-cyan-400 hover:bg-cyan-300 shadow transition flex items-center justify-center gap-1.5"
-            >
-              <i class="fa-solid fa-bell text-xs"></i> Đăng Ký Ngay
-            </button>
-          </form>
-          <p class="text-[10px] text-slate-400 text-center mt-2">Hủy đăng ký bất cứ lúc nào với 1 click.</p>
-        </div>
-
-      </aside>
-
+    <!-- Posts Grid -->
+    <div id="posts-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Rendered via JavaScript -->
     </div>
   </main>
 
-  <!-- ================= ARTICLE READING MODAL ================= -->
-  <div id="articleModal" class="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/70 backdrop-blur-md hidden opacity-0 transition-opacity duration-300">
-    <div class="bg-white dark:bg-slate-900 rounded-3xl max-w-3xl w-full max-h-[90vh] overflow-y-auto border border-slate-200 dark:border-slate-800 shadow-2xl flex flex-col transform scale-95 transition-transform duration-300" id="articleModalBox">
-      
-      <!-- Modal Header -->
-      <div class="sticky top-0 z-10 bg-white/90 dark:bg-slate-900/90 glassmorphism px-6 py-4 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between">
-        <div class="flex items-center gap-2">
-          <span id="modalCategoryBadge" class="px-2.5 py-1 rounded-full text-[11px] font-semibold bg-brand-50 dark:bg-brand-950 text-brand-600 dark:text-cyan-400 font-mono">
-            Category
-          </span>
-          <span class="text-xs text-slate-400 font-mono" id="modalReadTime">6 phút đọc</span>
-        </div>
-        
-        <div class="flex items-center gap-2">
-          <button onclick="sharePost()" class="w-8 h-8 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:text-brand-600 flex items-center justify-center text-xs" title="Sao chép liên kết">
-            <i class="fa-solid fa-share-nodes"></i>
-          </button>
-          <button onclick="closePostModal()" class="w-8 h-8 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:text-rose-500 flex items-center justify-center text-xs" title="Đóng">
-            <i class="fa-solid fa-xmark"></i>
-          </button>
-        </div>
+  <!-- Modal Đọc bài viết -->
+  <div id="reading-modal" class="fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-sm p-4 overflow-y-auto flex items-center justify-center">
+    <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl max-w-2xl w-full p-6 sm:p-8 relative shadow-2xl space-y-4 max-h-[90vh] overflow-y-auto">
+      <button onclick="closeModal()" class="absolute top-4 right-4 p-2 text-slate-400 hover:text-slate-700 dark:hover:text-white rounded-lg">
+        <i class="fa-solid fa-xmark text-lg"></i>
+      </button>
+
+      <div class="flex items-center gap-2 text-xs text-brand-600 dark:text-brand-400 font-semibold uppercase" id="modal-category">Category</div>
+      <h2 id="modal-title" class="text-2xl font-bold text-slate-900 dark:text-white leading-tight">Title</h2>
+      <div class="flex items-center gap-4 text-xs text-slate-400 border-b border-slate-100 dark:border-slate-800 pb-3">
+        <span id="modal-author"><i class="fa-solid fa-user-pen mr-1"></i> Nguyễn Thanh</span>
+        <span id="modal-date"><i class="fa-solid fa-calendar mr-1"></i> Hôm nay</span>
       </div>
 
-      <!-- Modal Body (Content) -->
-      <div class="p-6 sm:p-8 space-y-6">
-        
-        <!-- Post Title & Meta -->
-        <div>
-          <h2 id="modalTitle" class="text-xl sm:text-3xl font-extrabold text-slate-900 dark:text-white leading-tight">
-            Tiêu đề bài viết
-          </h2>
-          <div class="flex items-center gap-3 mt-4 text-xs text-slate-400 font-mono">
-            <span>Tác giả: <strong class="text-slate-700 dark:text-slate-200">Nguyễn Thành</strong></span>
-            <span>•</span>
-            <span id="modalDate">26 Tháng 10, 2026</span>
-          </div>
-        </div>
-
-        <!-- Post Image -->
-        <div class="rounded-2xl overflow-hidden max-h-80 w-full bg-slate-900">
-          <img id="modalImage" src="" alt="Post cover" class="w-full h-full object-cover">
-        </div>
-
-        <!-- Post Detailed Body Text -->
-        <div id="modalContent" class="text-slate-700 dark:text-slate-300 text-sm sm:text-base leading-relaxed space-y-4">
-          <!-- Dynamic Markdown styled paragraphs and codes injected here -->
-        </div>
-
-        <!-- Action / Like bar inside modal -->
-        <div class="pt-6 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between">
-          <div class="flex items-center gap-3">
-            <button onclick="likeArticle()" class="px-4 py-2 rounded-xl text-xs font-semibold bg-rose-50 dark:bg-rose-950/60 text-rose-600 dark:text-rose-400 border border-rose-200 dark:border-rose-900/40 hover:bg-rose-100 flex items-center gap-1.5 transition">
-              <i class="fa-solid fa-heart"></i> Thích bài viết (<span id="modalLikes">128</span>)
-            </button>
-            <button onclick="showToast('Đã lưu bài viết vào bookmark!', 'success')" class="px-4 py-2 rounded-xl text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 flex items-center gap-1.5 transition">
-              <i class="fa-regular fa-bookmark"></i> Lưu lại
-            </button>
-          </div>
-
-          <button onclick="closePostModal()" class="px-4 py-2 rounded-xl text-xs font-semibold text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white">
-            Đóng cửa sổ
-          </button>
-        </div>
-
+      <div id="modal-content" class="text-slate-700 dark:text-slate-300 space-y-4 leading-relaxed text-sm sm:text-base">
+        <!-- Content -->
       </div>
-
     </div>
   </div>
 
-  <!-- ================= TOAST NOTIFICATION CONTAINER (NO ALERT) ================= -->
-  <div id="toastContainer" class="fixed bottom-5 right-5 z-50 flex flex-col gap-2 pointer-events-none"></div>
-
-  <!-- ================= FOOTER ================= -->
-  <footer class="mt-16 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 transition-colors duration-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
-        
-        <!-- Brand & Slogan -->
-        <div class="flex flex-col items-center md:items-start text-center md:text-left">
-          <div class="flex items-center gap-2">
-            <div class="w-7 h-7 rounded-lg gradient-brand flex items-center justify-center text-white text-xs font-bold">
-              <i class="fa-solid fa-code"></i>
-            </div>
-            <span class="font-bold text-base text-slate-900 dark:text-white">nguyenthanhazt.tech</span>
-          </div>
-          <p class="text-xs text-slate-500 dark:text-slate-400 mt-2">
-            Blog công nghệ cá nhân chia sẻ về lập trình, giải pháp hạ tầng và AI.
-          </p>
-        </div>
-
-        <!-- Quick Links -->
-        <div class="flex items-center gap-6 text-xs text-slate-500 font-medium">
-          <a href="#featured" class="hover:text-brand-600 dark:hover:text-cyan-400 transition">Tiêu điểm</a>
-          <a href="#blog-feed" class="hover:text-brand-600 dark:hover:text-cyan-400 transition">Bài viết</a>
-          <a href="#author-section" class="hover:text-brand-600 dark:hover:text-cyan-400 transition">Tác giả</a>
-          <a href="#newsletter-section" class="hover:text-brand-600 dark:hover:text-cyan-400 transition">Bản tin</a>
-        </div>
-
-        <!-- Copyright -->
-        <div class="text-xs text-slate-400 font-mono text-center md:text-right">
-          © 2026 nguyenthanhazt.tech. Tất cả quyền được bảo lưu.
-        </div>
-
-      </div>
+  <!-- Newsletter Section -->
+  <section id="newsletter" class="bg-slate-100 dark:bg-slate-900/50 border-t border-slate-200 dark:border-slate-800 py-12">
+    <div class="max-w-xl mx-auto px-4 text-center space-y-4">
+      <h3 class="text-xl font-bold">Cập nhật những bài viết mới nhất</h3>
+      <p class="text-sm text-slate-600 dark:text-slate-400">Không spam. Chỉ gửi những chia sẻ kỹ thuật chất lượng cao.</p>
+      <form onsubmit="handleSubscribe(event)" class="flex gap-2 max-w-md mx-auto">
+        <input type="email" required placeholder="Nhập địa chỉ email của bạn..." class="flex-grow px-4 py-2.5 text-sm rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 focus:outline-none focus:ring-2 focus:ring-brand-500">
+        <button type="submit" class="px-5 py-2.5 text-sm font-semibold text-white bg-brand-600 rounded-xl hover:bg-brand-700 transition-colors">Đăng ký</button>
+      </form>
     </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-200 dark:border-slate-800 py-6 text-center text-xs text-slate-500">
+    <p>© 2026 Nguyễn Thanh. Thiết kế & phát triển trên tên miền <span class="font-mono text-slate-700 dark:text-slate-300">nguyenthanhazt.tech</span>.</p>
   </footer>
 
-  <!-- ================= JAVASCRIPT LOGIC ================= -->
+  <!-- Script xử lý dữ liệu & tương tác -->
   <script>
-    // 1. Articles Database
-    const articles = [
-      {
-        id: 0,
-        title: "Xây dựng Hệ Thống RAG Tối Ưu Với Vector Database Năm 2026",
-        category: "ai",
-        categoryName: "AI & Automation",
-        date: "26/10/2026",
-        readTime: "8 phút",
-        likes: 184,
-        image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80",
-        snippet: "Tìm hiểu cách tích hợp các mô hình ngôn ngữ lớn (LLM) với cơ sở dữ liệu véc-tơ để giảm hallucination và tối ưu hóa chi phí hạ tầng.",
-        content: `
-          <p>Retrieval-Augmented Generation (RAG) đã trở thành kiến trúc chủ đạo khi xây dựng các ứng dụng dựa trên trí tuệ nhân tạo (LLM). Thay vì chỉ dựa vào dữ liệu huấn luyện cố định, RAG cho phép mô hình truy xuất kiến thức thực tế tức thời từ cơ sở tri thức doanh nghiệp.</p>
-          
-          <h4 class="text-base font-bold text-slate-900 dark:text-white mt-4 mb-2">1. Thách thức với RAG truyền thống</h4>
-          <p>Mô hình RAG cơ bản thường gặp vấn đề về 'chunking' (cắt khúc dữ liệu) không chuẩn xác, dẫn đến việc embeding véc-tơ mất ngữ cảnh và tìm kiếm sai kết quả. Giải pháp là ứng dụng Semantic Chunking kết hợp với Hybrid Search (kết hợp Dense Vector và BM25 keyword matching).</p>
-
-          <div class="p-4 rounded-xl bg-slate-900 text-slate-200 font-mono text-xs overflow-x-auto my-3 border border-slate-800">
-            <code># Ví dụ Hybrid Search Pipeline với Python<br>from langchain.retrievers import EnsembleRetriever<br>from langchain_community.retrievers import BM25Retriever<br><br>ensemble_retriever = EnsembleRetriever(<br>&nbsp;&nbsp;&nbsp;&nbsp;retrievers=[bm25_retriever, vector_retriever],<br>&nbsp;&nbsp;&nbsp;&nbsp;weights=[0.3, 0.7]<br>)</code>
-          </div>
-
-          <h4 class="text-base font-bold text-slate-900 dark:text-white mt-4 mb-2">2. Kết luận</h4>
-          <p>Với các tối ưu hóa về Re-ranking và Context Compression, hệ thống RAG tại nguyenthanhazt.tech đã cải thiện độ chính xác câu trả lời lên đến 94% và giảm 40% chi phí gọi token OpenAI.</p>
-        `
-      },
+    // Dữ liệu bài viết mẫu
+    const posts = [
       {
         id: 1,
-        title: "Tối Ưu Performance Next.js App Router: Bí Kíp Tăng Điểm Lighthouse 99+",
-        category: "web",
-        categoryName: "Web & Frontend",
-        date: "20/10/2026",
-        readTime: "6 phút",
-        likes: 142,
-        image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80",
-        snippet: "Chi tiết các kỹ thuật Server Components, tối ưu hóa Dynamic Import, Streaming SSR và caching headers giúp website tải trong nháy mắt.",
+        title: "Cách trỏ tên miền về GitHub Pages chỉ trong 5 phút",
+        desc: "Hướng dẫn cấu hình bản ghi A và CNAME trên Namify để kích hoạt website chạy trên GitHub Pages với chứng chỉ SSL miễn phí.",
         content: `
-          <p>Hiệu năng web (Web Vitals) không chỉ ảnh hưởng trực tiếp đến trải nghiệm người dùng mà còn quyết định thứ hạng SEO trên Google. Với phiên bản Next.js mới nhất, việc nắm vững cách quản lý Server Components và Client Boundaries là chìa khóa then chốt.</p>
-          
-          <h4 class="text-base font-bold text-slate-900 dark:text-white mt-4 mb-2">Streaming và Suspense</h4>
-          <p>Sử dụng Streaming cho phép bạn hiển thị giao diện bộ khung (skeleton) ngay tức thì cho người dùng trong khi các truy vấn database nặng vẫn đang xử lý ở backend.</p>
-          
-          <div class="p-4 rounded-xl bg-slate-900 text-slate-200 font-mono text-xs overflow-x-auto my-3 border border-slate-800">
-            <code>&lt;Suspense fallback={&lt;SkeletonLoading /&gt;}&gt;<br>&nbsp;&nbsp;&lt;SlowDataComponent /&gt;<br>&lt;/Suspense&gt;</code>
-          </div>
-
-          <p>Hãy luôn kiểm tra bundle size với plugin @next/bundle-analyzer để phát hiện các thư viện nặng vô tình lọt vào phía client-side.</p>
-        `
+          <p>Khi mới mua tên miền từ các nhà cung cấp như Namify, việc liên kết tên miền về hosting miễn phí của GitHub thường khiến nhiều người bỡ ngỡ do khái niệm DNS.</p>
+          <h4 class="font-bold text-slate-900 dark:text-white mt-4">Các bước cốt lõi:</h4>
+          <ol class="list-decimal pl-5 space-y-1">
+            <li>Thêm 4 bản ghi A của GitHub (185.199.108.153 đến 111.153).</li>
+            <li>Đặt giá trị TTL về Auto hoặc 3600 giây.</li>
+            <li>Thêm bản ghi CNAME cho subdomain www trỏ về repository github.io.</li>
+          </ol>
+          <p class="mt-4">Sau khi thiết lập, hệ thống DNS sẽ tự động phân giải và kích hoạt ổ khóa bảo mật HTTPS cho tên miền của bạn.</p>
+        `,
+        category: "DevOps",
+        date: "30/10/2026"
       },
       {
         id: 2,
-        title: "Thiết Lập Kubernetes Cluster Siêu Tiết Kiệm Cho Dự Án Cá Nhân & Startup",
-        category: "devops",
-        categoryName: "DevOps & Cloud",
-        date: "14/10/2026",
-        readTime: "10 phút",
-        likes: 98,
-        image: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?auto=format&fit=crop&w=800&q=80",
-        snippet: "Hướng dẫn cài đặt K3s trên VPS giá rẻ, kết hợp Cloudflare Tunnels để vừa bảo mật vừa tiết kiệm chi phí Load Balancer hàng tháng.",
+        title: "Tích hợp AI và LLM vào ứng dụng phần mềm thực chiến",
+        desc: "Khám phá cách tận dụng các mô hình ngôn ngữ lớn để tự động hóa quy trình phát triển và cải thiện trải nghiệm người dùng.",
         content: `
-          <p>Rất nhiều kỹ sư ngần ngại học Kubernetes vì sợ chi phí cao khi thuê các dịch vụ quản trị như AWS EKS hay GKE. Tuy nhiên, với <strong>k3s</strong> (một bản phân phối Kubernetes siêu nhẹ của Rancher), bạn có thể chạy cluster mượt mà chỉ với VPS 4GB RAM.</p>
-          
-          <h4 class="text-base font-bold text-slate-900 dark:text-white mt-4 mb-2">Cài đặt K3s với một câu lệnh:</h4>
-          <div class="p-4 rounded-xl bg-slate-900 text-slate-200 font-mono text-xs overflow-x-auto my-3 border border-slate-800">
-            <code>curl -sfL https://get.k3s.io | sh -<br>sudo kubectl get nodes</code>
-          </div>
-          <p>Kết hợp với Cloudflare Zero Trust (Cloudflare Tunnel), bạn không cần phải mở cổng công khai hay mua Public IP tĩnh riêng, tiết kiệm tối đa chi phí hạ tầng mỗi tháng.</p>
-        `
+          <p>Trí tuệ nhân tạo không chỉ dừng lại ở các cuộc hội thoại mà đang trở thành thành phần cốt lõi trong quy trình kỹ thuật phần mềm hiện đại.</p>
+          <p class="mt-2">Bằng cách tích hợp các API tạo sinh và agentic IDE, chúng ta có thể tăng tốc từ khâu viết tài liệu, tạo nguyên mẫu giao diện đến kiểm thử tự động một cách vượt bậc.</p>
+        `,
+        category: "AI",
+        date: "28/10/2026"
       },
       {
         id: 3,
-        title: "10 Phím Tắt & Tiện Ích VS Code Giúp Tăng 200% Năng Suất Lập Trình",
-        category: "tips",
-        categoryName: "Tips & Tutorials",
-        date: "05/10/2026",
-        readTime: "4 phút",
-        likes: 215,
-        image: "https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=800&q=80",
-        snippet: "Bộ sưu tập các extension và mẹo cấu hình editor không thể thiếu dành cho Fullstack Developers hiện đại.",
+        title: "Xây dựng giao diện web hiện đại với Tailwind CSS",
+        desc: "Tại sao Tailwind CSS giúp tối ưu hóa tốc độ lập trình giao diện và duy trì tính nhất quán cho các dự án cá nhân.",
         content: `
-          <p>Mỗi lập trình viên dành hàng ngàn giờ mỗi năm trước editor. Việc tối ưu phím tắt và môi trường làm việc sẽ giúp bạn tiết kiệm năng lượng trí óc để tập trung vào logic thuật toán quan trọng.</p>
-          
-          <ul class="list-disc pl-5 space-y-2 text-xs sm:text-sm">
-            <li><strong>Multi-cursor selection (Ctrl/Cmd + D):</strong> Chọn nhanh các từ trùng nhau để sửa đồng thời.</li>
-            <li><strong>GitLens & GitHub Copilot:</strong> Tăng tốc review code và gợi ý snippet nhanh.</li>
-            <li><strong>Error Lens:</strong> Hiển thị trực tiếp lỗi syntax ngay trên dòng code mà không cần hover chuột.</li>
-          </ul>
-        `
-      },
-      {
-        id: 4,
-        title: "Micro-frontends Năm 2026: Khi Nào Nên Áp Dụng Và Khi Nào Là Cạm Bẫy?",
-        category: "web",
-        categoryName: "Web & Frontend",
-        date: "28/09/2026",
-        readTime: "7 phút",
-        likes: 110,
-        image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=800&q=80",
-        snippet: "Đánh giá thực tế về kiến trúc Micro-frontends từ góc nhìn quy mô đội ngũ, chi phí vận hành và tính phức tạp triển khai.",
-        content: `
-          <p>Micro-frontends từng được coi là giải pháp cứu cánh cho các ứng dụng web monolith khổng lồ. Tuy nhiên, không phải dự án nào cũng cần đến kiến trúc này.</p>
-          <p>Nếu nhóm của bạn dưới 15 kỹ sư, chi phí quản trị Module Federation, đồng bộ thư viện dùng chung và CI/CD phức tạp thường sẽ vượt trội hơn nhiều so với lợi ích mang lại. Hãy cân nhắc kỹ trước khi quyết định phân tách.</p>
-        `
+          <p>Tailwind CSS loại bỏ gánh nặng đặt tên class phức tạp và giúp bạn xây dựng giao diện tùy biến nhanh chóng mà không cần rời khỏi file mã nguồn HTML.</p>
+          <p class="mt-2">Kết hợp cùng chế độ Dark Mode dựa trên class và hệ màu sắc rõ ràng, bạn có thể tạo ra sản phẩm hoàn chỉnh trong thời gian ngắn nhất.</p>
+        `,
+        category: "Frontend",
+        date: "25/10/2026"
       }
     ];
 
-    let currentFilter = 'all';
-    let searchQuery = '';
-    let currentPostId = 0;
+    let currentFilter = 'All';
 
-    // 2. Render Articles Function
-    function renderArticles() {
-      const container = document.getElementById('articlesList');
-      const emptyNotice = document.getElementById('emptySearchNotice');
-      
-      const filtered = articles.filter(post => {
-        const matchesCategory = currentFilter === 'all' || post.category === currentFilter;
-        const matchesSearch = post.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
-                              post.snippet.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                              post.categoryName.toLowerCase().includes(searchQuery.toLowerCase());
-        return matchesCategory && matchesSearch;
-      });
-
-      if (filtered.length === 0) {
-        container.innerHTML = '';
-        emptyNotice.classList.remove('hidden');
+    function renderPosts(list) {
+      const container = document.getElementById('posts-container');
+      if (!list.length) {
+        container.innerHTML = `
+          <div class="col-span-full py-12 text-center text-slate-400">
+            <i class="fa-regular fa-folder-open text-3xl mb-2"></i>
+            <p>Không tìm thấy bài viết phù hợp.</p>
+          </div>
+        `;
         return;
-      } else {
-        emptyNotice.classList.add('hidden');
       }
 
-      container.innerHTML = filtered.map(post => `
-        <article class="group bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 p-5 sm:p-6 shadow-sm hover:shadow-md hover:border-brand-500/40 dark:hover:border-brand-500/40 transition-all duration-300">
-          <div class="flex flex-col sm:flex-row gap-5">
-            
-            <!-- Thumbnail -->
-            <div class="sm:w-52 h-44 sm:h-36 rounded-2xl overflow-hidden bg-slate-800 flex-shrink-0">
-              <img 
-                src="${post.image}" 
-                alt="${post.title}" 
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                loading="lazy"
-              >
+      container.innerHTML = list.map(p => `
+        <article class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 hover:shadow-lg hover:border-slate-300 dark:hover:border-slate-700 transition-all flex flex-col justify-between group">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between text-xs">
+              <span class="px-2.5 py-1 rounded-md bg-brand-50 dark:bg-brand-950/60 text-brand-600 dark:text-brand-400 font-semibold">${p.category}</span>
+              <span class="text-slate-400 font-mono">${p.date}</span>
             </div>
-
-            <!-- Meta & Info -->
-            <div class="flex-1 flex flex-col justify-between">
-              <div>
-                <div class="flex items-center gap-2 mb-2">
-                  <span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-semibold bg-brand-50 dark:bg-brand-950 text-brand-600 dark:text-cyan-400">
-                    ${post.categoryName}
-                  </span>
-                  <span class="text-[11px] text-slate-400 font-mono">• ${post.date}</span>
-                </div>
-
-                <h3 onclick="openPostModal(${post.id})" class="text-base sm:text-lg font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-cyan-400 transition cursor-pointer line-clamp-2">
-                  ${post.title}
-                </h3>
-
-                <p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-2 mt-2 leading-relaxed">
-                  ${post.snippet}
-                </p>
-              </div>
-
-              <div class="pt-4 mt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs">
-                <div class="flex items-center gap-3 text-slate-400 font-mono text-[11px]">
-                  <span><i class="fa-regular fa-clock mr-1"></i>${post.readTime}</span>
-                  <span><i class="fa-regular fa-heart mr-1"></i>${post.likes}</span>
-                </div>
-
-                <button onclick="openPostModal(${post.id})" class="font-semibold text-brand-600 dark:text-cyan-400 hover:underline flex items-center gap-1">
-                  Đọc tiếp <i class="fa-solid fa-chevron-right text-[10px]"></i>
-                </button>
-              </div>
-
-            </div>
-
+            <h3 class="text-lg font-bold group-hover:text-brand-600 transition-colors leading-snug cursor-pointer" onclick="openModal(${p.id})">
+              ${p.title}
+            </h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 line-clamp-3 leading-relaxed">
+              ${p.desc}
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-slate-100 dark:border-slate-800/60 flex items-center justify-between">
+            <button onclick="openModal(${p.id})" class="text-xs font-semibold text-brand-600 dark:text-brand-400 hover:underline flex items-center gap-1">
+              Đọc tiếp <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </button>
+            <span class="text-[11px] text-slate-400">Tác giả: Nguyễn Thanh</span>
           </div>
         </article>
       `).join('');
     }
 
-    // 3. Category Filter
-    function filterCategory(category, buttonEl) {
-      currentFilter = category;
-      const allButtons = document.querySelectorAll('.category-btn');
-      allButtons.forEach(btn => {
-        btn.classList.remove('bg-brand-600', 'text-white');
-        btn.classList.add('bg-slate-100', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-300');
+    function filterCategory(cat) {
+      currentFilter = cat;
+      document.querySelectorAll('.category-btn').forEach(btn => {
+        if (btn.dataset.cat === cat) {
+          btn.classList.add('bg-brand-600', 'text-white');
+          btn.classList.remove('bg-slate-100', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-300');
+        } else {
+          btn.classList.remove('bg-brand-600', 'text-white');
+          btn.classList.add('bg-slate-100', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-300');
+        }
       });
-
-      buttonEl.classList.remove('bg-slate-100', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-300');
-      buttonEl.classList.add('bg-brand-600', 'text-white');
-
-      renderArticles();
+      searchPosts();
     }
 
-    // 4. Live Search Handler
-    const searchInput = document.getElementById('searchInput');
-    const mobileSearchInput = document.getElementById('mobileSearchInput');
-
-    function handleSearch(query) {
-      searchQuery = query;
-      renderArticles();
+    function searchPosts() {
+      const query = document.getElementById('search-input').value.toLowerCase().trim();
+      const filtered = posts.filter(p => {
+        const matchCat = currentFilter === 'All' || p.category === currentFilter;
+        const matchQuery = p.title.toLowerCase().includes(query) || p.desc.toLowerCase().includes(query);
+        return matchCat && matchQuery;
+      });
+      renderPosts(filtered);
     }
 
-    if (searchInput) {
-      searchInput.addEventListener('input', (e) => handleSearch(e.target.value));
-    }
-    if (mobileSearchInput) {
-      mobileSearchInput.addEventListener('input', (e) => handleSearch(e.target.value));
-    }
-
-    // 5. Post Reader Modal Logic
-    const articleModal = document.getElementById('articleModal');
-    const articleModalBox = document.getElementById('articleModalBox');
-
-    function openPostModal(id) {
-      const post = articles.find(a => a.id === id);
+    function openModal(id) {
+      const post = posts.find(p => p.id === id);
       if (!post) return;
-      currentPostId = id;
-
-      document.getElementById('modalTitle').innerText = post.title;
-      document.getElementById('modalCategoryBadge').innerText = post.categoryName;
-      document.getElementById('modalDate').innerText = post.date;
-      document.getElementById('modalReadTime').innerText = post.readTime;
-      document.getElementById('modalImage').src = post.image;
-      document.getElementById('modalContent').innerHTML = post.content;
-      document.getElementById('modalLikes').innerText = post.likes;
-
-      articleModal.classList.remove('hidden');
-      setTimeout(() => {
-        articleModal.classList.remove('opacity-0');
-        articleModalBox.classList.remove('scale-95');
-        articleModalBox.classList.add('scale-100');
-      }, 20);
-      document.body.style.overflow = 'hidden';
+      document.getElementById('modal-category').innerText = post.category;
+      document.getElementById('modal-title').innerText = post.title;
+      document.getElementById('modal-date').innerHTML = `<i class="fa-solid fa-calendar mr-1"></i> ${post.date}`;
+      document.getElementById('modal-content').innerHTML = post.content;
+      document.getElementById('reading-modal').classList.remove('hidden');
     }
 
-    function closePostModal() {
-      articleModal.classList.add('opacity-0');
-      articleModalBox.classList.remove('scale-100');
-      articleModalBox.classList.add('scale-95');
-      setTimeout(() => {
-        articleModal.classList.add('hidden');
-        document.body.style.overflow = 'auto';
-      }, 250);
+    function closeModal() {
+      document.getElementById('reading-modal').classList.add('hidden');
     }
 
-    function likeArticle() {
-      const post = articles.find(a => a.id === currentPostId);
-      if (post) {
-        post.likes += 1;
-        document.getElementById('modalLikes').innerText = post.likes;
-        renderArticles();
-        showToast('Cảm ơn bạn đã thích bài viết!', 'success');
-      }
+    // Xử lý Dark / Light mode
+    const themeBtn = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+    
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+      themeIcon.classList.replace('fa-moon', 'fa-sun');
     }
 
-    function sharePost() {
-      const shareUrl = `https://nguyenthanhazt.tech/#post-${currentPostId}`;
-      const dummyInput = document.createElement('input');
-      document.body.appendChild(dummyInput);
-      dummyInput.value = shareUrl;
-      dummyInput.select();
-      document.execCommand('copy');
-      document.body.removeChild(dummyInput);
-      showToast('Đã sao chép liên kết bài viết vào Clipboard!', 'info');
-    }
-
-    // 6. Custom Toast Notification (Replacing alert())
-    function showToast(message, type = 'info') {
-      const container = document.getElementById('toastContainer');
-      const toast = document.createElement('div');
-      
-      let icon = 'fa-circle-info text-cyan-500';
-      if (type === 'success') icon = 'fa-circle-check text-emerald-500';
-      if (type === 'error') icon = 'fa-circle-exclamation text-rose-500';
-
-      toast.className = 'pointer-events-auto flex items-center gap-2.5 px-4 py-3 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xl text-xs font-medium text-slate-800 dark:text-slate-100 transform translate-y-3 opacity-0 transition-all duration-300';
-      toast.innerHTML = `
-        <i class="fa-solid ${icon} text-sm"></i>
-        <span>${message}</span>
-      `;
-      
-      container.appendChild(toast);
-
-      setTimeout(() => {
-        toast.classList.remove('translate-y-3', 'opacity-0');
-      }, 20);
-
-      setTimeout(() => {
-        toast.classList.add('opacity-0', 'translate-y-3');
-        setTimeout(() => toast.remove(), 300);
-      }, 3500);
-    }
-
-    // 7. Dark / Light Mode Switcher
-    const htmlEl = document.documentElement;
-    const themeToggleBtn = document.getElementById('themeToggleBtn');
-    const themeIcon = document.getElementById('themeIcon');
-
-    function initTheme() {
-      const savedTheme = localStorage.getItem('azt_blog_theme');
-      if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        htmlEl.classList.add('dark');
-        themeIcon.classList.remove('fa-moon');
-        themeIcon.classList.add('fa-sun');
+    themeBtn.addEventListener('click', () => {
+      if (document.documentElement.classList.contains('dark')) {
+        document.documentElement.classList.remove('dark');
+        localStorage.theme = 'light';
+        themeIcon.classList.replace('fa-sun', 'fa-moon');
       } else {
-        htmlEl.classList.remove('dark');
-        themeIcon.classList.remove('fa-sun');
-        themeIcon.classList.add('fa-moon');
-      }
-    }
-    initTheme();
-
-    themeToggleBtn.addEventListener('click', () => {
-      if (htmlEl.classList.contains('dark')) {
-        htmlEl.classList.remove('dark');
-        localStorage.setItem('azt_blog_theme', 'light');
-        themeIcon.classList.remove('fa-sun');
-        themeIcon.classList.add('fa-moon');
-      } else {
-        htmlEl.classList.add('dark');
-        localStorage.setItem('azt_blog_theme', 'dark');
-        themeIcon.classList.remove('fa-moon');
-        themeIcon.classList.add('fa-sun');
+        document.documentElement.classList.add('dark');
+        localStorage.theme = 'dark';
+        themeIcon.classList.replace('fa-moon', 'fa-sun');
       }
     });
 
-    // 8. Mobile Menu Toggle
-    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    mobileMenuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
-
-    // 9. Newsletter Form Submission
-    const newsletterForm = document.getElementById('newsletterForm');
-    newsletterForm.addEventListener('submit', (e) => {
+    function handleSubscribe(e) {
       e.preventDefault();
-      const email = document.getElementById('newsletterEmail').value;
-      showToast(`Đăng ký thành công với ${email}! Cảm ơn bạn.`, 'success');
-      newsletterForm.reset();
-    });
+      alert("Cảm ơn bạn! Thông báo xác nhận sẽ được gửi tới hòm thư.");
+      e.target.reset();
+    }
 
-    // Initial render
-    window.addEventListener('DOMContentLoaded', () => {
-      renderArticles();
-    });
+    // Khởi chạy ban đầu
+    renderPosts(posts);
   </script>
 </body>
 </html>
